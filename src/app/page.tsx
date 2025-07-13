@@ -11,7 +11,7 @@ import {
 
 export default function Portfolio() {
   const [text, setText] = useState('')
-  const roles = ['Backend Developer', 'Data Engineer', 'AI/LLM Engineer', 'Microservices Architect', 'Software Engineer']
+  const roles = ['Backend Developer', 'Data Engineer', 'AI/LLM Engineer', 'Software Engineer']
   const [roleIndex, setRoleIndex] = useState(0)
 
   useEffect(() => {
@@ -110,10 +110,8 @@ export default function Portfolio() {
     { name: 'OpenAI API', icon: Code2, color: '#00a67e', category: 'AI/LLM' },
     { name: 'Claude API', icon: Terminal, color: '#ff6b35', category: 'AI/LLM' },
     { name: 'MCP Servers', icon: Server, color: '#9333ea', category: 'AI/LLM' },
-    { name: 'TypeScript', icon: SiTypescript, color: '#3178c6', category: 'Frontend' },
-    { name: 'React', icon: SiReact, color: '#61dafb', category: 'Frontend' },
-    { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff', category: 'Frontend' },
-    { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06b6d4', category: 'Frontend' }
+    { name: 'JavaScript', icon: SiTypescript, color: '#f7df1e', category: 'Basic Web' },
+    { name: 'HTML/CSS', icon: Code2, color: '#e34c26', category: 'Basic Web' }
   ]
 
   const aiProjects = [
@@ -138,11 +136,11 @@ export default function Portfolio() {
   ]
 
   const skills = {
-    "Backend Development & API": ["Java (Spring Boot, J2EE)", "Python", "REST", "GraphQL", "SOAP APIs"],
+    "Backend Development & API": ["Java (Spring Boot, J2EE)", "Python", "REST", "GraphQL", "SOAP APIs", "Microservices"],
     "AI & LLM Engineering": ["OpenAI API", "Claude API", "MCP Servers", "Bot Development", "AI Automation", "Prompt Engineering"],
     "Cloud & DevOps": ["Azure", "AWS (EC2, S3, Lambda)", "Docker", "Apache Airflow", "Argo Workflows"],
     "Data & Storage": ["Snowflake", "Apache Spark", "MySQL", "MongoDB", "ETL Pipelines", "Data Ingestion & Processing"],
-    "Testing & Quality": ["JUnit", "Integration Testing", "Performance Testing"]
+    "Basic Web Technologies": ["JavaScript", "HTML", "CSS", "Basic React"]
   }
 
   const projects = [
@@ -747,10 +745,13 @@ export default function Portfolio() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-gray-200 dark:border-gray-700">
+      <footer className="py-8 px-6 border-t border-gray-700">
         <div className="container mx-auto text-center">
-          <p className="text-gray-600 dark:text-gray-400">
-            © 2024 Charan Tej Mandali. Built with Next.js and Tailwind CSS.
+          <p className="text-gray-400">
+            © 2024 Charan Tej Mandali. Portfolio built with Next.js, Tailwind CSS & AI assistance.
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
+            Backend Engineer specializing in Java, Python, Data Engineering & AI/LLM Integration
           </p>
         </div>
       </footer>
