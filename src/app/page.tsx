@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import { 
   SiPython, SiSpring, SiDocker, 
   SiSnowflake, SiMysql, SiMongodb,
-  SiTypescript, SiReact, SiNextdotjs, SiTailwindcss
+  SiTypescript
 } from 'react-icons/si'
 
 export default function Portfolio() {
