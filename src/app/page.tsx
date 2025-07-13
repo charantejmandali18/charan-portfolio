@@ -110,34 +110,36 @@ export default function Portfolio() {
     { name: 'OpenAI API', icon: Code2, color: '#00a67e', category: 'AI/LLM' },
     { name: 'Claude API', icon: Terminal, color: '#ff6b35', category: 'AI/LLM' },
     { name: 'MCP Servers', icon: Server, color: '#9333ea', category: 'AI/LLM' },
+    { name: 'Slack Bots', icon: Terminal, color: '#4a154b', category: 'AI/LLM' },
+    { name: 'Chat Automation', icon: Code2, color: '#25d366', category: 'AI/LLM' },
     { name: 'JavaScript', icon: SiTypescript, color: '#f7df1e', category: 'Basic Web' },
     { name: 'HTML/CSS', icon: Code2, color: '#e34c26', category: 'Basic Web' }
   ]
 
   const aiProjects = [
     {
-      title: "AI-Powered Automation Bots",
-      description: "Built intelligent automation bots using OpenAI and Claude APIs for various business processes",
+      title: "Slack Automation Bots",
+      description: "Built intelligent Slack bots for workplace automation using AI APIs and webhook integrations",
+      tech: ["Slack API", "OpenAI API", "Python", "Webhooks"],
+      highlights: ["Automated responses", "Workflow triggers", "Team productivity", "Custom slash commands"]
+    },
+    {
+      title: "AI-Powered Chat Automation",
+      description: "Developed intelligent chat automation systems for customer support and internal operations",
       tech: ["OpenAI API", "Claude API", "Python", "FastAPI"],
-      highlights: ["Natural language processing", "Automated workflows", "Context-aware responses", "Multi-modal interactions"]
+      highlights: ["Natural language processing", "Context-aware responses", "Multi-platform support", "24/7 availability"]
     },
     {
       title: "MCP Server Development",
       description: "Developed Model Context Protocol servers for enhanced AI agent capabilities and integrations",
       tech: ["MCP Protocol", "Python", "TypeScript", "REST APIs"],
       highlights: ["Custom tool integration", "Agent orchestration", "Protocol compliance", "Scalable architecture"]
-    },
-    {
-      title: "LLM Integration Platform",
-      description: "Created platform for seamless integration of multiple LLM providers with unified API",
-      tech: ["OpenAI", "Claude", "Python", "Docker"],
-      highlights: ["Multi-provider support", "Load balancing", "Cost optimization", "Real-time monitoring"]
     }
   ]
 
   const skills = {
     "Backend Development & API": ["Java (Spring Boot, J2EE)", "Python", "REST", "GraphQL", "SOAP APIs", "Microservices"],
-    "AI & LLM Engineering": ["OpenAI API", "Claude API", "MCP Servers", "Bot Development", "AI Automation", "Prompt Engineering"],
+    "AI & LLM Engineering": ["OpenAI API", "Claude API", "MCP Servers", "Slack Bots", "Chat Automation", "Bot Development", "AI Automation", "Prompt Engineering"],
     "Cloud & DevOps": ["Azure", "AWS (EC2, S3, Lambda)", "Docker", "Apache Airflow", "Argo Workflows"],
     "Data & Storage": ["Snowflake", "Apache Spark", "MySQL", "MongoDB", "ETL Pipelines", "Data Ingestion & Processing"],
     "Basic Web Technologies": ["JavaScript", "HTML", "CSS", "Basic React"]
