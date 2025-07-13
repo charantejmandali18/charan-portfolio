@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Charan Tej Mandali - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Design**: Clean, professional layout with smooth animations
+- **Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- **Dark Mode**: Toggle between light and dark themes
+- **Interactive**: Smooth animations and hover effects using Framer Motion
+- **Fast**: Built with Next.js 14 for optimal performance
+- **Type Safe**: Written in TypeScript for better development experience
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel (recommended)
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/charan-tej-mandali/portfolio.git
+cd portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 📦 Build and Deploy
 
-To learn more about Next.js, take a look at the following resources:
+### Build for production:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deploy to Vercel (Recommended):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Deploy with one click!
 
-## Deploy on Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/charan-tej-mandali/portfolio)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Other Deployment Options:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Netlify**: Connect your GitHub repo to Netlify
+- **GitHub Pages**: Use `npm run build` and deploy the `out` folder
+- **AWS S3**: Upload the build output to an S3 bucket
+
+## 🎨 Customization
+
+To customize the portfolio with your own information:
+
+1. Update the data in `src/app/page.tsx`:
+   - Personal information
+   - Experience details
+   - Skills and technologies
+   - Education background
+   - Awards and recognition
+
+2. Replace social media links:
+   - LinkedIn profile URL
+   - GitHub profile URL
+   - Email address
+
+3. Modify the color scheme in Tailwind CSS classes if desired
+
+## 📱 Sections
+
+- **Hero**: Introduction with name, title, and contact information
+- **Experience**: Professional work history with achievements
+- **Skills**: Technical skills organized by category
+- **Awards**: Recognition and achievements
+- **Education**: Academic background
+- **Contact**: Ways to get in touch
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Built with ❤️ by Charan Tej Mandali**
