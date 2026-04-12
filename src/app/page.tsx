@@ -11,7 +11,7 @@ import {
 
 export default function Portfolio() {
   const [text, setText] = useState('')
-  const roles = ['Backend Developer', 'Data Engineer', 'AI/LLM Engineer', 'Software Engineer']
+  const roles = ['AI Automation Engineer', 'AI/LLM Engineer', 'Backend Developer', 'Software Engineer']
   const [roleIndex, setRoleIndex] = useState(0)
 
   useEffect(() => {
@@ -58,12 +58,13 @@ export default function Portfolio() {
       period: "Aug 2024 – Present",
       location: "Hyderabad, India",
       achievements: [
-        "Contributed to backend development of Inspire Digital Platform (IDP) supporting major restaurant brands (BWW, Sonic, Arby's, Dunkin', Baskin-Robbins, Jimmy John's)",
-        "Developed secure account login flows using Auth0, integrating OTP verification through SendGrid",
-        "Collaborated on microservices for payment processing, menu generation, location management, order management, wallet functionality, and tally services",
-        "Implemented robust loyalty program leveraging Epsilon, driving customer engagement and retention",
-        "Developed notification system integrating SFMC, MadTech, SendGrid, and Twilio for multi-channel communication",
-        "Resolved critical defects within IDP, increasing platform stability and enhancing user experience"
+        "Integrated online ordering via Walmart app for Dunkin', orchestrating cross-platform data flows between enterprise systems at scale",
+        "Partnered with HMS Host (Avolta) to enable online ordering at airports, bus stations, and metro stations",
+        "Built backend microservices for IDP supporting 6 major brands (BWW, Sonic, Arby's, Dunkin', Baskin-Robbins, Jimmy John's) — payments, menus, orders, wallet, notifications",
+        "Automated multi-channel communication (email, SMS, push) integrating SFMC, MadTech, SendGrid, and Twilio",
+        "Implemented loyalty program automation with Epsilon driving engagement across multiple brands",
+        "Developed secure Auth0 login flows with OTP verification through SendGrid for millions of users",
+        "Resolved high-severity production defects, maintaining platform reliability across all brands"
       ]
     },
     {
@@ -72,14 +73,12 @@ export default function Portfolio() {
       period: "Jul 2022 – Aug 2024",
       location: "Hyderabad, India",
       achievements: [
-        "Engineered comprehensive backend API infrastructure using Apache Airflow for CFOTech",
-        "Enhanced data management platform overseeing data pipelines for financial products",
-        "Designed SFTP file ingestion processes using Snowflake for 50+ clients daily",
-        "Automated ETL pipelines using DBT and Apache Spark, boosting data processing efficiency by 40%",
-        "Engineered integration service with Meltano and Apache Airflow, reducing tool expenses by 30%",
-        "Developed 'copy workbook' feature in LiveCube with Apache Spark for 200+ users",
-        "Led upgrade of data catalog projects to JDK 17",
-        "Conducted POC with Apache Solr and implemented CDC using Debezium"
+        "Built a scalable integration service using Meltano + Apache Airflow, automating pipeline orchestration and cutting tool expenses by 30%",
+        "Automated ETL pipelines using DBT and Apache Spark pulling from ERP systems (Netsuite, Salesforce), boosting processing efficiency by 40%",
+        "Engineered backend API infrastructure using Apache Airflow for CFOTech, automating data integration across platforms",
+        "Designed automated SFTP file ingestion with Snowflake for high-volume data transfers serving 50+ clients daily",
+        "Built 'copy workbook' feature in LiveCube with Apache Spark for real-time data processing serving 200+ users",
+        "Ran POC integrating Apache Solr for search + CDC mechanism using Debezium for real-time data sync"
       ]
     },
     {
@@ -88,9 +87,9 @@ export default function Portfolio() {
       period: "May 2021 – Jun 2022",
       location: "Hyderabad, India",
       achievements: [
-        "Developed API integrations using Workato for seamless data flow",
-        "Engineered financial data parsers (MT940, BAI, BAI2) for bank statement processing",
-        "Designed testing strategies, increasing code coverage by 30%"
+        "Built API integrations using Workato, automating data flow across enterprise systems",
+        "Engineered financial data parsers (MT940, BAI, BAI2) for automated bank statement processing and reconciliation",
+        "Designed testing strategies that increased code coverage by 30%"
       ]
     }
   ]
@@ -118,55 +117,61 @@ export default function Portfolio() {
 
   const aiProjects = [
     {
-      title: "Slack Automation Bots",
-      description: "Built intelligent Slack bots for workplace automation using AI APIs and webhook integrations",
-      tech: ["Slack API", "OpenAI API", "Python", "Webhooks"],
-      highlights: ["Automated responses", "Workflow triggers", "Team productivity", "Custom slash commands"]
+      title: "MCP Server Development",
+      description: "Built Model Context Protocol servers that give AI agents the ability to interact with external systems through standardized tool interfaces",
+      tech: ["MCP Protocol", "Python", "TypeScript", "REST APIs"],
+      highlights: ["Custom tool servers for AI agents", "Standardized agent-tool orchestration", "Protocol-compliant architecture", "Extensible integration framework"]
     },
     {
       title: "AI-Powered Chat Automation",
-      description: "Developed intelligent chat automation systems for customer support and internal operations",
+      description: "Designed and built intelligent chat automation systems using LLM APIs with context-aware response pipelines for customer support and internal ops",
       tech: ["OpenAI API", "Claude API", "Python", "FastAPI"],
-      highlights: ["Natural language processing", "Context-aware responses", "Multi-platform support", "24/7 availability"]
+      highlights: ["Context-aware response pipelines", "Multi-platform automation", "LLM-powered intent routing", "24/7 automated support"]
     },
     {
-      title: "MCP Server Development",
-      description: "Developed Model Context Protocol servers for enhanced AI agent capabilities and integrations",
-      tech: ["MCP Protocol", "Python", "TypeScript", "REST APIs"],
-      highlights: ["Custom tool integration", "Agent orchestration", "Protocol compliance", "Scalable architecture"]
+      title: "Slack Automation Bots",
+      description: "Built AI-powered Slack bots that automate team workflows using LLM APIs, webhook integrations, and event-driven triggers",
+      tech: ["Slack API", "OpenAI API", "Python", "Webhooks"],
+      highlights: ["AI-driven workflow automation", "Custom slash commands", "Event-driven triggers", "Team productivity automation"]
     }
   ]
 
   const skills = {
-    "Backend Development & API": ["Java (Spring Boot, J2EE)", "Python", "REST", "GraphQL", "SOAP APIs", "Microservices"],
-    "AI & LLM Engineering": ["OpenAI API", "Claude API", "MCP Servers", "Slack Bots", "Chat Automation", "Bot Development", "AI Automation", "Prompt Engineering"],
-    "Cloud & DevOps": ["Azure", "AWS (EC2, S3, Lambda)", "Docker", "Apache Airflow", "Argo Workflows"],
-    "Data & Storage": ["Snowflake", "Apache Spark", "MySQL", "MongoDB", "ETL Pipelines", "Data Ingestion & Processing"],
-    "Basic Web Technologies": ["JavaScript", "HTML", "CSS", "Basic React"]
+    "AI & Automation": ["MCP Servers", "OpenAI API", "Claude API", "AI Agents", "Agentic Workflows", "Slack Bots", "Chat Automation", "Prompt Engineering", "LLM Integration"],
+    "Backend & API": ["Java (Spring Boot, J2EE)", "Python", "FastAPI", "REST", "GraphQL", "Microservices", "Distributed Systems"],
+    "Data & Orchestration": ["Apache Airflow", "Apache Spark", "Snowflake", "DBT", "Meltano", "ETL Pipelines", "CDC (Debezium)"],
+    "Cloud & DevOps": ["Azure", "AWS (EC2, S3, Lambda)", "Docker", "Argo Workflows"],
+    "Databases": ["MySQL", "MongoDB", "Snowflake", "Apache Solr"]
   }
 
   const projects = [
     {
       title: "Inspire Digital Platform (IDP)",
-      description: "Backend infrastructure supporting major restaurant brands with microservices architecture",
-      tech: ["Java", "Spring Boot", "Auth0", "SendGrid", "Epsilon"],
-      highlights: ["Multi-brand support", "Secure authentication", "Loyalty program", "Payment processing"]
+      description: "Backend microservices powering 6 major restaurant brands with Walmart and HMS Host integrations",
+      tech: ["Java", "Spring Boot", "Auth0", "Epsilon", "SFMC", "Twilio"],
+      highlights: ["6 brands, millions of users", "Walmart online ordering integration", "HMS Host airport/transit ordering", "Multi-channel notification automation"]
     },
     {
       title: "CFOTech Data Platform",
-      description: "Comprehensive backend API infrastructure with automated data pipelines",
-      tech: ["Apache Airflow", "Python", "Snowflake", "DBT"],
-      highlights: ["50+ clients", "40% efficiency boost", "30% cost reduction", "Real-time processing"]
+      description: "Automated data pipeline infrastructure with workflow orchestration for enterprise financial products",
+      tech: ["Apache Airflow", "Meltano", "Snowflake", "DBT", "Apache Spark"],
+      highlights: ["50+ clients daily", "40% processing efficiency gain", "30% tool cost reduction", "Automated ERP data ingestion"]
     },
     {
       title: "LiveCube Enhancement",
-      description: "Copy workbook feature with Apache Spark integration for 200+ users",
+      description: "Copy workbook feature with Apache Spark integration for real-time data processing",
       tech: ["Apache Spark", "Java", "Microservices"],
-      highlights: ["Real-time data processing", "Workflow management", "Scalable architecture"]
+      highlights: ["200+ active users", "Real-time data processing", "Workflow automation", "Scalable architecture"]
     }
   ]
 
   const awards = [
+    {
+      title: "Maverick Award",
+      company: "Inspire Brands",
+      year: "2025",
+      description: "Recognized for outstanding contribution and impact across the platform"
+    },
     {
       title: "Award of Applause (Highflyer Q1)",
       company: "Highradius",
@@ -175,14 +180,14 @@ export default function Portfolio() {
     },
     {
       title: "Nomination (Highflyer of the year)",
-      company: "Highradius", 
+      company: "Highradius",
       year: "2023",
       description: "Nominated for Highflyer of the year in CFOTech Department"
     },
     {
       title: "Certificate of Appreciation (Highako Q3)",
       company: "Highradius",
-      year: "2022", 
+      year: "2022",
       description: "Best Trainee for the Quarter in CFOTech Department"
     }
   ]
@@ -308,11 +313,11 @@ export default function Portfolio() {
             >
               <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/30 px-4 py-2 rounded-full">
                 <GitBranch className="text-cyan-400" size={20} />
-                <span className="text-sm font-semibold">3+ Years Experience</span>
+                <span className="text-sm font-semibold">4+ Years Experience</span>
               </div>
               <div className="flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 px-4 py-2 rounded-full">
                 <Cloud className="text-purple-400" size={20} />
-                <span className="text-sm font-semibold">AI & Microservices</span>
+                <span className="text-sm font-semibold">AI Automation & Backend</span>
               </div>
             </motion.div>
           </motion.div>
@@ -349,7 +354,7 @@ export default function Portfolio() {
               LinkedIn
             </motion.a>
             <motion.a
-              href="https://github.com/charan-tej-mandali"
+              href="https://github.com/charantejmandali18"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 border border-gray-600 hover:border-gray-500 hover:bg-gray-800 text-white rounded-lg transition-all duration-300"
@@ -732,7 +737,7 @@ export default function Portfolio() {
               LinkedIn
             </motion.a>
             <motion.a
-              href="https://github.com/charan-tej-mandali"
+              href="https://github.com/charantejmandali18"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 px-8 py-4 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
@@ -750,10 +755,10 @@ export default function Portfolio() {
       <footer className="py-8 px-6 border-t border-gray-700">
         <div className="container mx-auto text-center">
           <p className="text-gray-400">
-            © 2024 Charan Tej Mandali. Portfolio built with Next.js, Tailwind CSS & AI assistance.
+            © 2025 Charan Tej Mandali. Portfolio built with Next.js, Tailwind CSS & AI assistance.
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            Backend Engineer specializing in Java, Python, Data Engineering & AI/LLM Integration
+            AI Automation & Backend Engineer | MCP Servers, AI Agents, Enterprise Systems at Scale
           </p>
         </div>
       </footer>
