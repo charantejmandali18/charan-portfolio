@@ -171,37 +171,60 @@ export default function Portfolio() {
         </div>
       </header>
 
+      {/* HERO TAG STRIP — density up top */}
+      <div className="border-b-2 border-ink bg-paper">
+        <div className="container mx-auto px-6 py-2 flex flex-wrap items-center justify-between gap-3 text-xs font-mono uppercase tracking-widest">
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#f26b5e' }}></span>
+              available for AI roles
+            </span>
+            <span className="opacity-30">·</span>
+            <span>4+ yrs shipping</span>
+            <span className="opacity-30">·</span>
+            <span>6 brands</span>
+            <span className="opacity-30">·</span>
+            <span>50+ clients</span>
+          </div>
+          <div className="hidden md:flex items-center gap-3">
+            <span className="opacity-60">based in Hyderabad, IN</span>
+            <span className="opacity-30">·</span>
+            <span style={{ color: '#0f766e' }}>UTC+5:30</span>
+          </div>
+        </div>
+      </div>
+
       {/* HERO */}
-      <section className="container mx-auto px-6 pt-12 md:pt-20 pb-16">
+      <section className="container mx-auto px-6 pt-6 md:pt-10 pb-10">
         <div className="grid md:grid-cols-12 gap-6 items-start">
           {/* Left: Headline */}
           <motion.div
-            className="md:col-span-8"
+            className="md:col-span-7"
             variants={stagger}
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={fadeUp} className="font-mono text-sm mb-6 flex items-center gap-2">
+            <motion.div variants={fadeUp} className="font-mono text-sm mb-4 flex items-center gap-2">
               <span className="inline-block w-8 h-px bg-ink"></span>
               <span className="uppercase tracking-widest">01 / Hello, internet</span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
-              className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight mb-6"
+              className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-5"
               style={{ fontFamily: 'Georgia, serif' }}
             >
-              I build <span className="italic text-tangerine" style={{ color: '#e76f51' }}>AI systems</span>
+              I build <span className="italic" style={{ color: '#f26b5e' }}>AI systems</span>
               <br />
-              that <span className="underline decoration-4 decoration-teal underline-offset-8" style={{ textDecorationColor: '#287271' }}>actually</span> ship.
+              that <span className="underline decoration-4 underline-offset-8" style={{ textDecorationColor: '#0f766e' }}>actually</span> ship.
             </motion.h1>
 
-            <motion.div variants={fadeUp} className="font-mono text-lg md:text-xl mb-8 inline-block bg-ink text-paper px-4 py-2">
+            <motion.div variants={fadeUp} className="font-mono text-base md:text-lg mb-5 inline-block bg-ink text-paper px-3 py-1.5">
               <span className="opacity-60">$ role:</span> {text}
               <span className="animate-pulse">▊</span>
             </motion.div>
 
-            <motion.p variants={fadeUp} className="text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
+            <motion.p variants={fadeUp} className="text-base md:text-lg max-w-2xl leading-relaxed mb-6">
               4+ years building production backend systems at enterprise scale.
               Currently obsessed with <strong>MCP servers, AI agents, and automation that doesn&apos;t suck</strong>.
               Backend muscle meets LLM ambition.
@@ -225,7 +248,7 @@ export default function Portfolio() {
 
           {/* Right: Photo + Info card */}
           <motion.div
-            className="md:col-span-4 md:mt-12 space-y-4"
+            className="md:col-span-5 md:mt-8 space-y-4"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
@@ -246,20 +269,20 @@ export default function Portfolio() {
                 </div>
                 <div className="font-mono text-xs uppercase tracking-widest mt-3 px-1 flex justify-between">
                   <span>charan.jpg</span>
-                  <span style={{ color: '#e76f51' }}>● live</span>
+                  <span style={{ color: '#f26b5e' }}>● live</span>
                 </div>
               </div>
               {/* Decorative tape */}
               <div
                 className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 border border-ink/40 opacity-80 rotate-3"
-                style={{ backgroundColor: '#f2cc8f' }}
+                style={{ backgroundColor: '#fcd6c2' }}
               ></div>
             </div>
 
             {/* Stats card */}
             <div
               className="border-2 border-ink shadow-brutal p-6 transform rotate-1"
-              style={{ backgroundColor: '#e9b44c' }}
+              style={{ backgroundColor: '#f59e42' }}
             >
               <div className="font-mono text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
                 <Sparkles size={14} /> Quick stats
@@ -325,9 +348,9 @@ export default function Portfolio() {
       </div>
 
       {/* WORK / EXPERIENCE */}
-      <section id="work" className="container mx-auto px-6 py-16 md:py-24">
-        <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-          The track <span className="italic" style={{ color: '#e76f51' }}>record</span>.
+      <section id="work" className="container mx-auto px-6 py-10 md:py-16">
+        <h2 className="text-4xl md:text-6xl font-black mb-8" style={{ fontFamily: 'Georgia, serif' }}>
+          The track <span className="italic" style={{ color: '#f26b5e' }}>record</span>.
         </h2>
 
         <div className="space-y-8">
@@ -339,7 +362,7 @@ export default function Portfolio() {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5 }}
               className="bg-paper border-2 border-ink shadow-brutal-lg p-6 md:p-8"
-              style={{ backgroundColor: idx === 0 ? '#e9b44c' : '#f0e7d4' }}
+              style={{ backgroundColor: idx === 0 ? '#f59e42' : '#f5ead4' }}
             >
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
                 <div>
@@ -381,7 +404,7 @@ export default function Portfolio() {
       </section>
 
       {/* DIVIDER */}
-      <div className="border-t-2 border-ink py-3" style={{ backgroundColor: '#287271', color: '#faf4e8' }}>
+      <div className="border-t-2 border-ink py-3" style={{ backgroundColor: '#0f766e', color: '#fff6e6' }}>
         <div className="container mx-auto px-6 font-mono text-sm uppercase tracking-widest flex justify-between">
           <span>03 / AI &amp; Automation</span>
           <span className="hidden md:block">↓ projects</span>
@@ -389,10 +412,10 @@ export default function Portfolio() {
       </div>
 
       {/* AI PROJECTS */}
-      <section id="projects" className="container mx-auto px-6 py-16 md:py-24">
-        <div className="max-w-3xl mb-12">
+      <section id="projects" className="container mx-auto px-6 py-10 md:py-16">
+        <div className="max-w-3xl mb-8">
           <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: 'Georgia, serif' }}>
-            Side projects, <span className="italic" style={{ color: '#287271' }}>real intent</span>.
+            Side projects, <span className="italic" style={{ color: '#0f766e' }}>real intent</span>.
           </h2>
           <p className="text-lg opacity-80">
             I don&apos;t just integrate APIs — I build the infrastructure agents need to be reliable in production.
@@ -402,12 +425,12 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-3 gap-6">
           {aiProjects.map((project, idx) => {
             const accentMap: Record<string, string> = {
-              tangerine: '#e76f51',
-              teal: '#287271',
-              mustard: '#e9b44c',
+              tangerine: '#f26b5e',
+              teal: '#0f766e',
+              mustard: '#f59e42',
             }
             const bgColor = accentMap[project.accent]
-            const textColor = project.accent === 'mustard' ? '#1a2b3d' : '#faf4e8'
+            const textColor = project.accent === 'mustard' ? '#1a1f3d' : '#fff6e6'
 
             return (
               <motion.div
@@ -444,13 +467,13 @@ export default function Portfolio() {
       </section>
 
       {/* ENTERPRISE PROJECTS */}
-      <section className="container mx-auto px-6 py-16 md:py-24 border-t-2 border-ink">
+      <section className="container mx-auto px-6 py-10 md:py-16 border-t-2 border-ink">
         <div className="font-mono text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
           <span className="inline-block w-8 h-px bg-ink"></span>
           <span>04 / Enterprise systems</span>
         </div>
-        <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-          Built at <span className="italic" style={{ color: '#e76f51' }}>scale</span>.
+        <h2 className="text-4xl md:text-6xl font-black mb-8" style={{ fontFamily: 'Georgia, serif' }}>
+          Built at <span className="italic" style={{ color: '#f26b5e' }}>scale</span>.
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -463,7 +486,7 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="bg-paper border-2 border-ink shadow-brutal brutal-hover p-6"
             >
-              <div className="text-5xl font-black mb-1" style={{ color: '#e76f51', fontFamily: 'Georgia, serif' }}>
+              <div className="text-5xl font-black mb-1" style={{ color: '#f26b5e', fontFamily: 'Georgia, serif' }}>
                 {project.stat}
               </div>
               <div className="font-mono text-xs uppercase tracking-widest mb-4 opacity-70">
@@ -488,14 +511,14 @@ export default function Portfolio() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="bg-ink text-paper py-16 md:py-24">
+      <section id="skills" className="bg-ink text-paper py-10 md:py-16">
         <div className="container mx-auto px-6">
           <div className="font-mono text-sm uppercase tracking-widest mb-4 flex items-center gap-2 opacity-70">
             <span className="inline-block w-8 h-px bg-paper"></span>
             <span>05 / The toolkit</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-            What I <span className="italic" style={{ color: '#e9b44c' }}>reach for</span>.
+          <h2 className="text-4xl md:text-6xl font-black mb-8" style={{ fontFamily: 'Georgia, serif' }}>
+            What I <span className="italic" style={{ color: '#f59e42' }}>reach for</span>.
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -508,7 +531,7 @@ export default function Portfolio() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="border-2 border-paper p-6"
               >
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Georgia, serif', color: '#e9b44c' }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Georgia, serif', color: '#f59e42' }}>
                   {cat.name}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -528,20 +551,20 @@ export default function Portfolio() {
       </section>
 
       {/* AWARDS */}
-      <section className="container mx-auto px-6 py-16 md:py-24">
+      <section className="container mx-auto px-6 py-10 md:py-16">
         <div className="font-mono text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
           <span className="inline-block w-8 h-px bg-ink"></span>
           <span>06 / Wall of stickers</span>
         </div>
-        <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-          Things I&apos;ve <span className="italic" style={{ color: '#e76f51' }}>broken open</span>.
+        <h2 className="text-4xl md:text-6xl font-black mb-8" style={{ fontFamily: 'Georgia, serif' }}>
+          Things I&apos;ve <span className="italic" style={{ color: '#f26b5e' }}>broken open</span>.
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {awards.map((award, idx) => {
             const rotations = ['rotate-2', '-rotate-1', 'rotate-1', '-rotate-2']
-            const colors = ['#e9b44c', '#e76f51', '#287271', '#f0e7d4']
-            const textColors = ['#1a2b3d', '#faf4e8', '#faf4e8', '#1a2b3d']
+            const colors = ['#f59e42', '#f26b5e', '#0f766e', '#f5ead4']
+            const textColors = ['#1a1f3d', '#fff6e6', '#fff6e6', '#1a1f3d']
             return (
               <motion.div
                 key={idx}
@@ -585,8 +608,8 @@ export default function Portfolio() {
       </div>
 
       {/* CONTACT */}
-      <section id="contact" className="py-16 md:py-24" style={{ backgroundColor: '#e76f51' }}>
-        <div className="container mx-auto px-6 text-paper" style={{ color: '#1a2b3d' }}>
+      <section id="contact" className="py-10 md:py-16" style={{ backgroundColor: '#f26b5e' }}>
+        <div className="container mx-auto px-6 text-paper" style={{ color: '#1a1f3d' }}>
           <div className="font-mono text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
             <span className="inline-block w-8 h-px bg-ink"></span>
             <span>07 / Let&apos;s build something</span>
@@ -636,7 +659,7 @@ export default function Portfolio() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-sm">
           <div>
             <span className="opacity-60">© 2025</span> Charan Tej Mandali ·{' '}
-            <span style={{ color: '#e9b44c' }}>AI Automation Engineer</span>
+            <span style={{ color: '#f59e42' }}>AI Automation Engineer</span>
           </div>
           <div className="opacity-60">
             built with Next.js + Tailwind, no template was harmed.

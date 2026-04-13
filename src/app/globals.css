@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf4e8;
-  --foreground: #1a2b3d;
-  --accent-primary: #e76f51;
-  --accent-secondary: #287271;
-  --accent-tertiary: #e9b44c;
-  --accent-soft: #f2cc8f;
-  --paper: #f0e7d4;
-  --ink: #1a2b3d;
+  --background: #fff6e6;
+  --foreground: #1a1f3d;
+  --accent-primary: #f26b5e;
+  --accent-secondary: #0f766e;
+  --accent-tertiary: #f59e42;
+  --accent-soft: #fcd6c2;
+  --paper: #f5ead4;
+  --ink: #1a1f3d;
 }
 
 @theme inline {
@@ -31,27 +31,27 @@ body {
 
 /* Brutalist hard shadow utilities */
 .shadow-brutal {
-  box-shadow: 6px 6px 0 0 #1a2b3d;
+  box-shadow: 6px 6px 0 0 #1a1f3d;
 }
 .shadow-brutal-sm {
-  box-shadow: 4px 4px 0 0 #1a2b3d;
+  box-shadow: 4px 4px 0 0 #1a1f3d;
 }
 .shadow-brutal-lg {
-  box-shadow: 8px 8px 0 0 #1a2b3d;
+  box-shadow: 8px 8px 0 0 #1a1f3d;
 }
 .shadow-brutal-coral {
-  box-shadow: 6px 6px 0 0 #e76f51;
+  box-shadow: 6px 6px 0 0 #f26b5e;
 }
 .shadow-brutal-teal {
-  box-shadow: 6px 6px 0 0 #287271;
+  box-shadow: 6px 6px 0 0 #0f766e;
 }
 
 /* Paper grain texture */
 .paper-bg {
-  background-color: #faf4e8;
+  background-color: #fff6e6;
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(26,43,61,0.08) 1px, transparent 0);
-  background-size: 16px 16px;
+    radial-gradient(circle at 1px 1px, rgba(26,31,61,0.07) 1px, transparent 0);
+  background-size: 14px 14px;
 }
 
 /* Marquee strip */
@@ -69,5 +69,5 @@ body {
 }
 .brutal-hover:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 0 #1a2b3d;
+  box-shadow: 8px 8px 0 0 #1a1f3d;
 }
