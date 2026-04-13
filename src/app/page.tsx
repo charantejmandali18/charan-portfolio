@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Phone, MapPin, Code2, Database, Server, Cloud, Terminal, GitBranch } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { 
   SiPython, SiSpring, SiDocker, 
   SiSnowflake, SiMysql, SiMongodb,
@@ -11,7 +11,7 @@ import {
 
 export default function Portfolio() {
   const [text, setText] = useState('')
-  const roles = ['AI Automation Engineer', 'AI/LLM Engineer', 'Backend Developer', 'Software Engineer']
+  const roles = useMemo(() => ['AI Automation Engineer', 'AI/LLM Engineer', 'Backend Developer', 'Software Engineer'], [])
   const [roleIndex, setRoleIndex] = useState(0)
 
   useEffect(() => {
@@ -243,126 +243,183 @@ export default function Portfolio() {
       </motion.header>
 
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         className="pt-24 pb-20 px-6 relative overflow-hidden"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="grid grid-cols-12 gap-4 h-full">
-            {Array.from({ length: 60 }).map((_, i) => (
-              <motion.div
-                key={i}
-                className="bg-blue-500 rounded"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 0.1, scale: 1 }}
-                transition={{ delay: i * 0.1, duration: 2 }}
-              />
-            ))}
-          </div>
-        </div>
+        {/* Animated grid background */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"></div>
 
-        <div className="container mx-auto text-center relative z-10">
-          <motion.div variants={itemVariants} className="mb-8">
-            <div className="flex justify-center items-center gap-4 mb-6">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              >
-                <Code2 size={48} className="text-blue-600" />
-              </motion.div>
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                <Server size={48} className="text-purple-600" />
-              </motion.div>
-              <motion.div
-                animate={{ rotate: [-15, 15, -15] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <Database size={48} className="text-green-600" />
-              </motion.div>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Charan Tej Mandali
+        <div className="container mx-auto relative z-10 max-w-5xl">
+          {/* Status pill */}
+          <motion.div variants={itemVariants} className="flex justify-center mb-8">
+            <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/30 px-4 py-2 rounded-full">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
               </span>
-            </h1>
-            
-            <div className="text-xl md:text-3xl mb-8 text-gray-300 h-12 flex items-center justify-center">
-              <Terminal className="mr-3 text-cyan-400" size={32} />
-              <span className="font-mono">
-                {text}
+              <span className="text-sm font-mono text-green-400">open_to_opportunities = true</span>
+            </div>
+          </motion.div>
+
+          {/* Terminal window */}
+          <motion.div
+            variants={itemVariants}
+            className="bg-gray-950 border border-gray-700 rounded-xl shadow-2xl shadow-cyan-500/10 overflow-hidden mb-10"
+          >
+            {/* Terminal header */}
+            <div className="flex items-center gap-2 px-4 py-3 bg-gray-900 border-b border-gray-700">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span className="text-xs text-gray-500 font-mono ml-3">~/charan/portfolio — zsh</span>
+            </div>
+
+            {/* Terminal body */}
+            <div className="p-6 md:p-8 font-mono text-sm md:text-base">
+              <div className="mb-2">
+                <span className="text-green-400">charan@hyderabad</span>
+                <span className="text-gray-500">:</span>
+                <span className="text-cyan-400">~</span>
+                <span className="text-gray-500">$ </span>
+                <span className="text-gray-300">whoami</span>
+              </div>
+
+              <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Charan Tej Mandali
+                </span>
+              </h1>
+
+              <div className="mb-4">
+                <span className="text-green-400">charan@hyderabad</span>
+                <span className="text-gray-500">:</span>
+                <span className="text-cyan-400">~</span>
+                <span className="text-gray-500">$ </span>
+                <span className="text-gray-300">cat ./role.txt</span>
+              </div>
+
+              <div className="text-xl md:text-2xl text-gray-200 mb-6 flex items-center">
+                <span className="text-purple-400 mr-2">&gt;</span>
+                <span>{text}</span>
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ duration: 1, repeat: Infinity }}
-                  className="text-cyan-400"
+                  className="text-cyan-400 ml-1"
                 >
-                  |
+                  ▊
                 </motion.span>
-              </span>
-            </div>
+              </div>
 
-            <motion.div 
-              className="flex justify-center gap-6 mb-8"
-              variants={itemVariants}
-            >
-              <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/30 px-4 py-2 rounded-full">
-                <GitBranch className="text-cyan-400" size={20} />
-                <span className="text-sm font-semibold">4+ Years Experience</span>
+              <div className="mb-2">
+                <span className="text-green-400">charan@hyderabad</span>
+                <span className="text-gray-500">:</span>
+                <span className="text-cyan-400">~</span>
+                <span className="text-gray-500">$ </span>
+                <span className="text-gray-300">cat about.md</span>
               </div>
-              <div className="flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 px-4 py-2 rounded-full">
-                <Cloud className="text-purple-400" size={20} />
-                <span className="text-sm font-semibold">AI Automation & Backend</span>
+
+              <div className="text-gray-300 leading-relaxed mb-6 pl-4 border-l-2 border-cyan-500/40">
+                Backend engineer turned <span className="text-cyan-400">AI automation builder</span>.
+                Shipping production systems for <span className="text-purple-400">6 restaurant brands</span> at Inspire Brands.
+                Built data pipelines for <span className="text-pink-400">50+ enterprise clients</span> at Highradius.
+                Currently building <span className="text-green-400">MCP servers</span>, intelligent bots, and LLM-powered automation.
               </div>
-            </motion.div>
+
+              {/* Stats grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div className="bg-gray-900/60 border border-gray-700 rounded-lg px-3 py-2">
+                  <div className="text-cyan-400 text-2xl font-bold">4+</div>
+                  <div className="text-gray-500 text-xs">years shipping</div>
+                </div>
+                <div className="bg-gray-900/60 border border-gray-700 rounded-lg px-3 py-2">
+                  <div className="text-purple-400 text-2xl font-bold">6</div>
+                  <div className="text-gray-500 text-xs">brands at scale</div>
+                </div>
+                <div className="bg-gray-900/60 border border-gray-700 rounded-lg px-3 py-2">
+                  <div className="text-pink-400 text-2xl font-bold">50+</div>
+                  <div className="text-gray-500 text-xs">enterprise clients</div>
+                </div>
+                <div className="bg-gray-900/60 border border-gray-700 rounded-lg px-3 py-2">
+                  <div className="text-green-400 text-2xl font-bold">∞</div>
+                  <div className="text-gray-500 text-xs">cups of chai</div>
+                </div>
+              </div>
+
+              <div>
+                <span className="text-green-400">charan@hyderabad</span>
+                <span className="text-gray-500">:</span>
+                <span className="text-cyan-400">~</span>
+                <span className="text-gray-500">$ </span>
+                <span className="text-gray-300">./contact.sh</span>
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                  className="text-cyan-400 ml-1"
+                >
+                  ▊
+                </motion.span>
+              </div>
+            </div>
           </motion.div>
-          <motion.div 
+
+          {/* Contact + CTA row */}
+          <motion.div
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-6 mb-8"
+            className="flex flex-wrap justify-center gap-3 mb-6"
           >
-            <div className="flex items-center gap-2 bg-gray-800/50 border border-gray-700 px-4 py-2 rounded-lg">
-              <Mail size={20} className="text-cyan-400" />
+            <a
+              href="mailto:charantejmandali18@gmail.com"
+              className="flex items-center gap-2 bg-gray-800/60 border border-gray-700 hover:border-cyan-500/50 px-4 py-2 rounded-lg transition-all font-mono text-sm"
+            >
+              <Mail size={16} className="text-cyan-400" />
               <span className="text-gray-300">charantejmandali18@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-2 bg-gray-800/50 border border-gray-700 px-4 py-2 rounded-lg">
-              <Phone size={20} className="text-cyan-400" />
-              <span className="text-gray-300">8309741626</span>
-            </div>
-            <div className="flex items-center gap-2 bg-gray-800/50 border border-gray-700 px-4 py-2 rounded-lg">
-              <MapPin size={20} className="text-cyan-400" />
-              <span className="text-gray-300">Hyderabad, India</span>
+            </a>
+            <div className="flex items-center gap-2 bg-gray-800/60 border border-gray-700 px-4 py-2 rounded-lg font-mono text-sm">
+              <MapPin size={16} className="text-cyan-400" />
+              <span className="text-gray-300">Hyderabad, IN (UTC+5:30)</span>
             </div>
           </motion.div>
-          <motion.div 
+
+          <motion.div
             variants={itemVariants}
-            className="flex justify-center gap-4"
+            className="flex justify-center gap-3"
           >
             <motion.a
               href="https://linkedin.com/in/charan-tej-mandali"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white rounded-lg transition-all duration-300"
+              className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white rounded-lg transition-all font-semibold"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Linkedin size={20} />
+              <Linkedin size={18} />
               LinkedIn
             </motion.a>
             <motion.a
               href="https://github.com/charantejmandali18"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 border border-gray-600 hover:border-gray-500 hover:bg-gray-800 text-white rounded-lg transition-all duration-300"
+              className="flex items-center gap-2 px-5 py-3 border border-gray-600 hover:border-cyan-500/50 hover:bg-gray-800 text-white rounded-lg transition-all font-semibold"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Github size={20} />
+              <Github size={18} />
               GitHub
+            </motion.a>
+            <motion.a
+              href="#experience"
+              className="flex items-center gap-2 px-5 py-3 border border-gray-600 hover:border-cyan-500/50 hover:bg-gray-800 text-white rounded-lg transition-all font-semibold"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Code2 size={18} />
+              See my work
             </motion.a>
           </motion.div>
         </div>
@@ -377,12 +434,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-          >
-            Tech Stack & Tools
-          </motion.h2>
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <div className="text-cyan-400/70 font-mono text-sm mb-2">// the_arsenal.json</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Tech Stack &amp; Tools
+            </h2>
+          </motion.div>
           <motion.div 
             variants={itemVariants}
             className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6"
@@ -421,12 +478,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-          >
-            AI & LLM Projects
-          </motion.h2>
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <div className="text-cyan-400/70 font-mono text-sm mb-2">/* the_fun_stuff */</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              AI &amp; Automation Projects
+            </h2>
+          </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiProjects.map((project, index) => (
               <motion.div
@@ -483,12 +540,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-          >
-            Enterprise Projects
-          </motion.h2>
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <div className="text-purple-400/70 font-mono text-sm mb-2">// production.systems[]</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Enterprise Projects
+            </h2>
+          </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
@@ -546,12 +603,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-          >
-            Professional Experience
-          </motion.h2>
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <div className="text-cyan-400/70 font-mono text-sm mb-2">$ git log --oneline --author=&quot;charan&quot;</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Professional Experience
+            </h2>
+          </motion.div>
           <div className="space-y-8">
             {experience.map((job, index) => (
               <motion.div
@@ -594,12 +651,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold text-center mb-16"
-          >
-            Technical Skills
-          </motion.h2>
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <div className="text-cyan-400/70 font-mono text-sm mb-2">// import * as Skills from &apos;./brain&apos;</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Technical Skills
+            </h2>
+          </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, skillList], index) => (
               <motion.div
@@ -633,12 +690,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold text-center mb-16"
-          >
-            Awards & Recognition
-          </motion.h2>
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <div className="text-yellow-400/70 font-mono text-sm mb-2">// achievements.unlocked()</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              Awards &amp; Recognition
+            </h2>
+          </motion.div>
           <div className="grid md:grid-cols-3 gap-8">
             {awards.map((award, index) => (
               <motion.div
@@ -666,12 +723,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold text-center mb-16"
-          >
-            Education
-          </motion.h2>
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <div className="text-cyan-400/70 font-mono text-sm mb-2">// the_paperwork.edu</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Education
+            </h2>
+          </motion.div>
           <div className="space-y-8">
             {education.map((edu, index) => (
               <motion.div
@@ -706,12 +763,12 @@ export default function Portfolio() {
         viewport={{ once: true }}
       >
         <div className="container mx-auto text-center">
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl font-bold mb-16"
-          >
-            Let&apos;s Connect
-          </motion.h2>
+          <motion.div variants={itemVariants} className="mb-16">
+            <div className="text-cyan-400/70 font-mono text-sm mb-2">$ ssh charan@hire.me</div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Let&apos;s Connect
+            </h2>
+          </motion.div>
           <motion.div 
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-6"
@@ -752,13 +809,18 @@ export default function Portfolio() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-gray-700">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-400">
-            © 2025 Charan Tej Mandali. Portfolio built with Next.js, Tailwind CSS & AI assistance.
+      <footer className="py-8 px-6 border-t border-gray-700/50 bg-gray-950">
+        <div className="container mx-auto text-center font-mono">
+          <p className="text-gray-400 text-sm">
+            <span className="text-gray-600">{`<`}</span>
+            <span className="text-cyan-400">footer</span>
+            <span className="text-purple-400"> built-with</span>
+            <span className="text-gray-500">=</span>
+            <span className="text-green-400">&quot;Next.js + Tailwind + ☕&quot;</span>
+            <span className="text-gray-600">{` />`}</span>
           </p>
-          <p className="text-gray-500 text-sm mt-2">
-            AI Automation & Backend Engineer | MCP Servers, AI Agents, Enterprise Systems at Scale
+          <p className="text-gray-600 text-xs mt-3">
+            © 2025 Charan Tej Mandali // <span className="text-cyan-400">AI Automation Engineer</span> // <span className="text-gray-500">no rights reserved, just copy</span>
           </p>
         </div>
       </footer>
