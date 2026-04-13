@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#287271"/>
+  <circle cx="200" cy="180" r="70" fill="#f2cc8f"/>
+  <path d="M 80 500 Q 80 320 200 320 Q 320 320 320 500 Z" fill="#f2cc8f"/>
+  <text x="200" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#1a2b3d" font-weight="bold">CTM</text>
+</svg>

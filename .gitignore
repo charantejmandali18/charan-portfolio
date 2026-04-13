@@ -43,3 +43,6 @@ next-env.d.ts
 
 # graphify knowledge graph (auto-generated)
 graphify-out/
+
+# claude memory symlink (personal, do not commit)
+memory/

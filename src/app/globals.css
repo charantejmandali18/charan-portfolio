@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5efe6;
-  --foreground: #0f1a2e;
-  --accent-primary: #e63946;
-  --accent-secondary: #1b5e47;
-  --accent-tertiary: #f4d35e;
-  --paper: #ece5d6;
-  --ink: #0f1a2e;
+  --background: #faf4e8;
+  --foreground: #1a2b3d;
+  --accent-primary: #e76f51;
+  --accent-secondary: #287271;
+  --accent-tertiary: #e9b44c;
+  --accent-soft: #f2cc8f;
+  --paper: #f0e7d4;
+  --ink: #1a2b3d;
 }
 
 @theme inline {
@@ -30,26 +31,26 @@ body {
 
 /* Brutalist hard shadow utilities */
 .shadow-brutal {
-  box-shadow: 6px 6px 0 0 #0f1a2e;
+  box-shadow: 6px 6px 0 0 #1a2b3d;
 }
 .shadow-brutal-sm {
-  box-shadow: 4px 4px 0 0 #0f1a2e;
+  box-shadow: 4px 4px 0 0 #1a2b3d;
 }
 .shadow-brutal-lg {
-  box-shadow: 8px 8px 0 0 #0f1a2e;
+  box-shadow: 8px 8px 0 0 #1a2b3d;
 }
 .shadow-brutal-coral {
-  box-shadow: 6px 6px 0 0 #e63946;
+  box-shadow: 6px 6px 0 0 #e76f51;
 }
-.shadow-brutal-forest {
-  box-shadow: 6px 6px 0 0 #1b5e47;
+.shadow-brutal-teal {
+  box-shadow: 6px 6px 0 0 #287271;
 }
 
 /* Paper grain texture */
 .paper-bg {
-  background-color: #f5efe6;
+  background-color: #faf4e8;
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(15,26,46,0.08) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(26,43,61,0.08) 1px, transparent 0);
   background-size: 16px 16px;
 }
 
@@ -68,5 +69,5 @@ body {
 }
 .brutal-hover:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 0 #0f1a2e;
+  box-shadow: 8px 8px 0 0 #1a2b3d;
 }
