@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f1ea;
+  --foreground: #0a0a0a;
+  --accent-primary: #ff5a1f;
+  --accent-secondary: #1e5f5c;
+  --accent-tertiary: #fcd34d;
+  --paper: #ebe6da;
+  --ink: #0a0a0a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-tangerine: var(--accent-primary);
+  --color-teal: var(--accent-secondary);
+  --color-mustard: var(--accent-tertiary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Helvetica, sans-serif;
+}
+
+/* Brutalist hard shadow utilities */
+.shadow-brutal {
+  box-shadow: 6px 6px 0 0 #0a0a0a;
+}
+.shadow-brutal-sm {
+  box-shadow: 4px 4px 0 0 #0a0a0a;
+}
+.shadow-brutal-lg {
+  box-shadow: 8px 8px 0 0 #0a0a0a;
+}
+.shadow-brutal-tangerine {
+  box-shadow: 6px 6px 0 0 #ff5a1f;
+}
+.shadow-brutal-teal {
+  box-shadow: 6px 6px 0 0 #1e5f5c;
+}
+
+/* Paper grain texture */
+.paper-bg {
+  background-color: #f4f1ea;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(10,10,10,0.08) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Marquee strip */
+.marquee {
+  animation: scroll 30s linear infinite;
+}
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Hover lift effect for brutalist cards */
+.brutal-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.brutal-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 0 #0a0a0a;
 }
