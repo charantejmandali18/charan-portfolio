@@ -199,7 +199,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-12 gap-6 items-start">
           {/* Left: Headline */}
           <motion.div
-            className="md:col-span-7"
+            className="md:col-span-8"
             variants={stagger}
             initial="hidden"
             animate="visible"
@@ -230,7 +230,7 @@ export default function Portfolio() {
               Backend muscle meets LLM ambition.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-8">
               <a
                 href="#contact"
                 className="bg-ink text-paper px-6 py-3 font-mono text-sm uppercase tracking-wider border-2 border-ink shadow-brutal brutal-hover flex items-center gap-2"
@@ -244,26 +244,50 @@ export default function Portfolio() {
                 See the work
               </a>
             </motion.div>
+
+            {/* Currently building strip — fills the empty space, adds density */}
+            <motion.div variants={fadeUp} className="border-t-2 border-ink pt-5">
+              <div className="font-mono text-xs uppercase tracking-widest mb-3 opacity-70">
+                ↳ currently shipping
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {[
+                  { label: 'MCP servers', desc: 'tool infra for AI agents', color: '#f26b5e' },
+                  { label: 'Chat automation', desc: 'LLM-powered workflows', color: '#0f766e' },
+                  { label: 'Slack bots', desc: 'event-driven AI ops', color: '#f59e42' },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="border-2 border-ink p-3 bg-paper brutal-hover"
+                    style={{ borderLeftWidth: '6px', borderLeftColor: item.color }}
+                  >
+                    <div className="font-bold text-sm" style={{ fontFamily: 'Georgia, serif' }}>
+                      {item.label}
+                    </div>
+                    <div className="text-xs font-mono opacity-70 mt-0.5">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Right: Photo + Info card */}
           <motion.div
-            className="md:col-span-5 md:mt-8 space-y-4"
+            className="md:col-span-4 md:mt-8 space-y-4"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             {/* Photo card */}
             <div className="relative transform -rotate-2">
-              <div className="border-2 border-ink shadow-brutal-lg bg-paper p-3">
-                <div className="relative w-full aspect-[4/5] overflow-hidden border-2 border-ink bg-ink/10">
-                  {/* Drop your photo at /public/charan-profile.jpg to replace the placeholder */}
+              <div className="border-2 border-ink shadow-brutal-lg bg-paper p-2.5">
+                <div className="relative w-full aspect-square overflow-hidden border-2 border-ink bg-ink/10">
                   <Image
-                    src="/charan-profile.svg"
+                    src="/charan-profile.jpg"
                     alt="Charan Tej Mandali"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover object-top"
                     priority
                   />
                 </div>
