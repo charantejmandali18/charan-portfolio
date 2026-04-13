@@ -278,25 +278,130 @@ export default function Portfolio() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            {/* Photo card */}
+            {/* Photo card — Dev Aura edition */}
             <div className="relative transform -rotate-2">
-              <div className="border-2 border-ink shadow-brutal-lg bg-paper p-2.5">
-                <div className="relative w-full aspect-square overflow-hidden border-2 border-ink bg-ink/10">
+              <div
+                className="border-2 border-ink shadow-brutal-lg p-2.5 relative overflow-hidden"
+                style={{ backgroundColor: '#1a1f3d' }}
+              >
+                {/* Grid texture on dark bg */}
+                <div
+                  className="absolute inset-0 opacity-30 pointer-events-none"
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(rgba(242,107,94,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(242,107,94,0.15) 1px, transparent 1px)',
+                    backgroundSize: '24px 24px',
+                  }}
+                ></div>
+
+                {/* Falling code characters */}
+                <div className="absolute inset-0 pointer-events-none font-mono text-xs overflow-hidden">
+                  <div className="code-fall-1 absolute left-[10%] top-0" style={{ color: '#f26b5e', opacity: 0.6 }}>
+                    01101<br/>AI<br/>&lt;/&gt;<br/>001
+                  </div>
+                  <div className="code-fall-2 absolute left-[45%] top-0" style={{ color: '#0f766e', opacity: 0.6 }}>
+                    MCP<br/>{'{'}<br/>fn()<br/>{'}'}
+                  </div>
+                  <div className="code-fall-3 absolute left-[80%] top-0" style={{ color: '#f59e42', opacity: 0.6 }}>
+                    agent<br/>0x7f<br/>→<br/>exec
+                  </div>
+                </div>
+
+                {/* Photo stage */}
+                <div className="relative w-full aspect-square overflow-hidden border-2 border-ink">
+                  {/* Radial glow backdrop (pulses) */}
+                  <div
+                    className="absolute inset-0 pulse-glow pointer-events-none"
+                    style={{
+                      background:
+                        'radial-gradient(circle at 50% 40%, rgba(242,107,94,0.55), rgba(15,118,110,0.35) 40%, transparent 70%)',
+                    }}
+                  ></div>
+
+                  {/* Animated SVG trace border — follows the photo frame */}
+                  <svg
+                    className="absolute inset-0 w-full h-full pointer-events-none"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                    aria-hidden
+                  >
+                    <rect
+                      x="1"
+                      y="1"
+                      width="98"
+                      height="98"
+                      fill="none"
+                      stroke="#f26b5e"
+                      strokeWidth="0.6"
+                      className="trace-stroke"
+                    />
+                    <rect
+                      x="3"
+                      y="3"
+                      width="94"
+                      height="94"
+                      fill="none"
+                      stroke="#0f766e"
+                      strokeWidth="0.3"
+                      strokeDasharray="2 4"
+                      opacity="0.7"
+                    />
+                  </svg>
+
+                  {/* Transparent PNG of the person */}
                   <Image
-                    src="/charan-profile.jpg"
+                    src="/charan-profile-nobg.png"
                     alt="Charan Tej Mandali"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-top"
+                    className="object-cover object-top relative z-10"
                     priority
                   />
+
+                  {/* Scanline sweep over the photo */}
+                  <div
+                    className="absolute inset-x-0 h-[3px] scanline z-20 pointer-events-none"
+                    style={{
+                      background:
+                        'linear-gradient(to bottom, transparent, rgba(242,107,94,0.9), transparent)',
+                      boxShadow: '0 0 10px rgba(242,107,94,0.8)',
+                    }}
+                  ></div>
+
+                  {/* Corner brackets — IDE / crosshair vibe */}
+                  <div className="absolute top-2 left-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M1 5V1H5" stroke="currentColor" strokeWidth="1.5" />
+                    </svg>
+                  </div>
+                  <div className="absolute top-2 right-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M13 5V1H9" stroke="currentColor" strokeWidth="1.5" />
+                    </svg>
+                  </div>
+                  <div className="absolute bottom-2 left-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M1 9V13H5" stroke="currentColor" strokeWidth="1.5" />
+                    </svg>
+                  </div>
+                  <div className="absolute bottom-2 right-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M13 9V13H9" stroke="currentColor" strokeWidth="1.5" />
+                    </svg>
+                  </div>
                 </div>
-                <div className="font-mono text-xs uppercase tracking-widest mt-3 px-1 flex justify-between">
-                  <span>charan.jpg</span>
-                  <span style={{ color: '#f26b5e' }}>● live</span>
+
+                {/* Terminal-style metadata row */}
+                <div className="font-mono text-[10px] uppercase tracking-widest mt-2 px-1 flex justify-between items-center relative z-10" style={{ color: '#f5ead4' }}>
+                  <span className="opacity-70">~/charan.png</span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#22c55e' }}></span>
+                    <span style={{ color: '#22c55e' }}>ONLINE</span>
+                  </span>
                 </div>
               </div>
-              {/* Decorative tape */}
+
+              {/* Tape */}
               <div
                 className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 border border-ink/40 opacity-80 rotate-3"
                 style={{ backgroundColor: '#fcd6c2' }}
