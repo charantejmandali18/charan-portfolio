@@ -144,7 +144,35 @@ export default function Portfolio() {
   ]
 
   return (
-    <div className="min-h-screen paper-bg text-ink">
+    <div className="min-h-screen paper-bg text-ink relative overflow-hidden">
+      {/* GLOBAL DEV-AURA LAYER — subtle code rain floating across entire page */}
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.08] font-mono text-xs select-none">
+        <div className="absolute left-[5%] top-0 code-fall-1" style={{ color: '#1a1f3d' }}>
+          {'{\n'}const<br/>await<br/>=&gt;<br/>async<br/>01101<br/>MCP<br/>agent<br/>LLM<br/>fn()<br/>{'}\n'}
+        </div>
+        <div className="absolute left-[18%] top-0 code-fall-2" style={{ color: '#f26b5e' }}>
+          import<br/>&lt;/&gt;<br/>yield<br/>hooks<br/>API<br/>0x7f<br/>→<br/>exec<br/>deploy
+        </div>
+        <div className="absolute left-[32%] top-0 code-fall-3" style={{ color: '#0f766e' }}>
+          ship<br/>build<br/>merge<br/>push<br/>commit<br/>rebase<br/>stash<br/>main
+        </div>
+        <div className="absolute left-[48%] top-0 code-fall-1" style={{ color: '#1a1f3d' }}>
+          {'[]'}<br/>spark<br/>dbt<br/>flow<br/>snow<br/>query<br/>pipe<br/>etl
+        </div>
+        <div className="absolute left-[65%] top-0 code-fall-2" style={{ color: '#f26b5e' }}>
+          auth<br/>token<br/>jwt<br/>oauth<br/>ssl<br/>tls<br/>2fa<br/>sha256
+        </div>
+        <div className="absolute left-[80%] top-0 code-fall-3" style={{ color: '#0f766e' }}>
+          k8s<br/>docker<br/>pod<br/>deploy<br/>scale<br/>observe<br/>trace<br/>log
+        </div>
+        <div className="absolute left-[93%] top-0 code-fall-1" style={{ color: '#f59e42' }}>
+          ai<br/>agent<br/>mcp<br/>rag<br/>llm<br/>chat<br/>tool<br/>call
+        </div>
+      </div>
+
+      {/* Content sits above the code rain */}
+      <div className="relative z-10">
+
       {/* Header */}
       <header className="border-b-2 border-ink bg-paper sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -278,134 +306,37 @@ export default function Portfolio() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            {/* Photo card — Dev Aura edition */}
-            <div className="relative transform -rotate-2">
-              <div
-                className="border-2 border-ink shadow-brutal-lg p-2.5 relative overflow-hidden"
-                style={{ backgroundColor: '#1a1f3d' }}
-              >
-                {/* Grid texture on dark bg */}
+            {/* Photo — clean Canva-style white outline silhouette */}
+            <div className="relative">
+              <div className="relative aspect-square w-full">
+                {/* Soft radial glow behind for warmth */}
                 <div
-                  className="absolute inset-0 opacity-30 pointer-events-none"
+                  className="absolute inset-0 pulse-glow pointer-events-none rounded-full"
                   style={{
-                    backgroundImage:
-                      'linear-gradient(rgba(242,107,94,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(242,107,94,0.15) 1px, transparent 1px)',
-                    backgroundSize: '24px 24px',
+                    background:
+                      'radial-gradient(circle at 50% 45%, rgba(242,107,94,0.35), rgba(15,118,110,0.2) 45%, transparent 70%)',
                   }}
                 ></div>
-
-                {/* Falling code characters */}
-                <div className="absolute inset-0 pointer-events-none font-mono text-xs overflow-hidden">
-                  <div className="code-fall-1 absolute left-[10%] top-0" style={{ color: '#f26b5e', opacity: 0.6 }}>
-                    01101<br/>AI<br/>&lt;/&gt;<br/>001
-                  </div>
-                  <div className="code-fall-2 absolute left-[45%] top-0" style={{ color: '#0f766e', opacity: 0.6 }}>
-                    MCP<br/>{'{'}<br/>fn()<br/>{'}'}
-                  </div>
-                  <div className="code-fall-3 absolute left-[80%] top-0" style={{ color: '#f59e42', opacity: 0.6 }}>
-                    agent<br/>0x7f<br/>→<br/>exec
-                  </div>
-                </div>
-
-                {/* Photo stage */}
-                <div className="relative w-full aspect-square overflow-hidden border-2 border-ink">
-                  {/* Radial glow backdrop (pulses) */}
-                  <div
-                    className="absolute inset-0 pulse-glow pointer-events-none"
-                    style={{
-                      background:
-                        'radial-gradient(circle at 50% 40%, rgba(242,107,94,0.55), rgba(15,118,110,0.35) 40%, transparent 70%)',
-                    }}
-                  ></div>
-
-                  {/* Animated SVG trace border — follows the photo frame */}
-                  <svg
-                    className="absolute inset-0 w-full h-full pointer-events-none"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                    aria-hidden
-                  >
-                    <rect
-                      x="1"
-                      y="1"
-                      width="98"
-                      height="98"
-                      fill="none"
-                      stroke="#f26b5e"
-                      strokeWidth="0.6"
-                      className="trace-stroke"
-                    />
-                    <rect
-                      x="3"
-                      y="3"
-                      width="94"
-                      height="94"
-                      fill="none"
-                      stroke="#0f766e"
-                      strokeWidth="0.3"
-                      strokeDasharray="2 4"
-                      opacity="0.7"
-                    />
-                  </svg>
-
-                  {/* Transparent PNG of the person */}
-                  <Image
-                    src="/charan-profile-nobg.png"
-                    alt="Charan Tej Mandali"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-top relative z-10"
-                    priority
-                  />
-
-                  {/* Scanline sweep over the photo */}
-                  <div
-                    className="absolute inset-x-0 h-[3px] scanline z-20 pointer-events-none"
-                    style={{
-                      background:
-                        'linear-gradient(to bottom, transparent, rgba(242,107,94,0.9), transparent)',
-                      boxShadow: '0 0 10px rgba(242,107,94,0.8)',
-                    }}
-                  ></div>
-
-                  {/* Corner brackets — IDE / crosshair vibe */}
-                  <div className="absolute top-2 left-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M1 5V1H5" stroke="currentColor" strokeWidth="1.5" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-2 right-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M13 5V1H9" stroke="currentColor" strokeWidth="1.5" />
-                    </svg>
-                  </div>
-                  <div className="absolute bottom-2 left-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M1 9V13H5" stroke="currentColor" strokeWidth="1.5" />
-                    </svg>
-                  </div>
-                  <div className="absolute bottom-2 right-2 z-20 corner-blink" style={{ color: '#f26b5e' }}>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M13 9V13H9" stroke="currentColor" strokeWidth="1.5" />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Terminal-style metadata row */}
-                <div className="font-mono text-[10px] uppercase tracking-widest mt-2 px-1 flex justify-between items-center relative z-10" style={{ color: '#f5ead4' }}>
-                  <span className="opacity-70">~/charan.png</span>
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#22c55e' }}></span>
-                    <span style={{ color: '#22c55e' }}>ONLINE</span>
-                  </span>
+                {/* Silhouette with baked-in white outline */}
+                <Image
+                  src="/charan-profile-outlined.png"
+                  alt="Charan Tej Mandali"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-contain object-bottom relative z-10 drop-shadow-[6px_6px_0_rgba(26,31,61,0.25)]"
+                  priority
+                />
+                {/* Animated accent arrow pointing to him — Canva vibe */}
+                <div className="absolute -left-2 top-[20%] z-20 font-mono text-xs hidden md:flex items-center gap-1 rotate-[-8deg]" style={{ color: '#f26b5e' }}>
+                  <span>← this guy</span>
                 </div>
               </div>
-
-              {/* Tape */}
-              <div
-                className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 border border-ink/40 opacity-80 rotate-3"
-                style={{ backgroundColor: '#fcd6c2' }}
-              ></div>
+              {/* Caption tag */}
+              <div className="inline-flex items-center gap-2 mt-2 bg-ink text-paper font-mono text-xs px-3 py-1.5 border-2 border-ink shadow-brutal-sm">
+                <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#22c55e' }}></span>
+                <span>{'charan@hyderabad:~$'}</span>
+                <span style={{ color: '#f59e42' }}>online</span>
+              </div>
             </div>
 
             {/* Stats card */}
@@ -478,8 +409,12 @@ export default function Portfolio() {
 
       {/* WORK / EXPERIENCE */}
       <section id="work" className="container mx-auto px-6 py-10 md:py-16">
+        <div className="font-mono text-xs opacity-60 mb-2">
+          {'>'} console.log(&apos;experience&apos;)
+        </div>
         <h2 className="text-4xl md:text-6xl font-black mb-8" style={{ fontFamily: 'Georgia, serif' }}>
-          The track <span className="italic" style={{ color: '#f26b5e' }}>record</span>.
+          The track <span className="italic" style={{ color: '#f26b5e' }}>record</span>
+          <span className="inline-block w-3 h-8 md:h-12 ml-2 align-middle" style={{ backgroundColor: '#f26b5e', animation: 'corner-blink 1s infinite' }}></span>.
         </h2>
 
         <div className="space-y-8">
@@ -543,6 +478,9 @@ export default function Portfolio() {
       {/* AI PROJECTS */}
       <section id="projects" className="container mx-auto px-6 py-10 md:py-16">
         <div className="max-w-3xl mb-8">
+          <div className="font-mono text-xs opacity-60 mb-2">
+            /* side quests that feed the main plot */
+          </div>
           <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: 'Georgia, serif' }}>
             Side projects, <span className="italic" style={{ color: '#0f766e' }}>real intent</span>.
           </h2>
@@ -596,7 +534,11 @@ export default function Portfolio() {
       </section>
 
       {/* ENTERPRISE PROJECTS */}
-      <section className="container mx-auto px-6 py-10 md:py-16 border-t-2 border-ink">
+      <section className="container mx-auto px-6 py-10 md:py-16 border-t-2 border-ink relative">
+        {/* Terminal prompt accent */}
+        <div className="absolute top-4 right-6 font-mono text-xs hidden md:block opacity-40">
+          {'~/prod $'} <span className="animate-pulse">▊</span>
+        </div>
         <div className="font-mono text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
           <span className="inline-block w-8 h-px bg-ink"></span>
           <span>04 / Enterprise systems</span>
@@ -795,6 +737,8 @@ export default function Portfolio() {
           </div>
         </div>
       </footer>
+
+      </div>{/* /relative z-10 content wrapper */}
     </div>
   )
 }
