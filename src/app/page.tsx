@@ -144,35 +144,7 @@ export default function Portfolio() {
   ]
 
   return (
-    <div className="min-h-screen paper-bg text-ink relative overflow-hidden">
-      {/* GLOBAL DEV-AURA LAYER — subtle code rain floating across entire page */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.08] font-mono text-xs select-none">
-        <div className="absolute left-[5%] top-0 code-fall-1" style={{ color: '#1a1f3d' }}>
-          {'{\n'}const<br/>await<br/>=&gt;<br/>async<br/>01101<br/>MCP<br/>agent<br/>LLM<br/>fn()<br/>{'}\n'}
-        </div>
-        <div className="absolute left-[18%] top-0 code-fall-2" style={{ color: '#f26b5e' }}>
-          import<br/>&lt;/&gt;<br/>yield<br/>hooks<br/>API<br/>0x7f<br/>→<br/>exec<br/>deploy
-        </div>
-        <div className="absolute left-[32%] top-0 code-fall-3" style={{ color: '#0f766e' }}>
-          ship<br/>build<br/>merge<br/>push<br/>commit<br/>rebase<br/>stash<br/>main
-        </div>
-        <div className="absolute left-[48%] top-0 code-fall-1" style={{ color: '#1a1f3d' }}>
-          {'[]'}<br/>spark<br/>dbt<br/>flow<br/>snow<br/>query<br/>pipe<br/>etl
-        </div>
-        <div className="absolute left-[65%] top-0 code-fall-2" style={{ color: '#f26b5e' }}>
-          auth<br/>token<br/>jwt<br/>oauth<br/>ssl<br/>tls<br/>2fa<br/>sha256
-        </div>
-        <div className="absolute left-[80%] top-0 code-fall-3" style={{ color: '#0f766e' }}>
-          k8s<br/>docker<br/>pod<br/>deploy<br/>scale<br/>observe<br/>trace<br/>log
-        </div>
-        <div className="absolute left-[93%] top-0 code-fall-1" style={{ color: '#f59e42' }}>
-          ai<br/>agent<br/>mcp<br/>rag<br/>llm<br/>chat<br/>tool<br/>call
-        </div>
-      </div>
-
-      {/* Content sits above the code rain */}
-      <div className="relative z-10">
-
+    <div className="min-h-screen paper-bg text-ink">
       {/* Header */}
       <header className="border-b-2 border-ink bg-paper sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -306,67 +278,29 @@ export default function Portfolio() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            {/* Photo — coral-outlined silhouette with dev-card backdrop */}
-            <div className="relative">
-              <div
-                className="relative aspect-square w-full border-2 border-ink shadow-brutal-lg overflow-hidden"
-                style={{ backgroundColor: '#f5ead4' }}
-              >
-                {/* Dotted paper texture */}
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(26,31,61,0.15) 1px, transparent 0)',
-                    backgroundSize: '12px 12px',
-                  }}
-                ></div>
-                {/* Pulsing coral radial glow */}
-                <div
-                  className="absolute inset-0 pulse-glow pointer-events-none"
-                  style={{
-                    background:
-                      'radial-gradient(circle at 50% 50%, rgba(242,107,94,0.40), rgba(15,118,110,0.18) 50%, transparent 75%)',
-                  }}
-                ></div>
-                {/* Silhouette with baked coral outline */}
-                <Image
-                  src="/charan-profile-outlined.png"
-                  alt="Charan Tej Mandali"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-contain object-bottom relative z-10"
-                  priority
-                />
-                {/* Corner crosshairs */}
-                {[
-                  { c: 'top-2 left-2', d: 'M1 5V1H5' },
-                  { c: 'top-2 right-2', d: 'M13 5V1H9' },
-                  { c: 'bottom-2 left-2', d: 'M1 9V13H5' },
-                  { c: 'bottom-2 right-2', d: 'M13 9V13H9' },
-                ].map((pos, i) => (
-                  <svg
-                    key={i}
-                    className={`absolute ${pos.c} z-20 corner-blink`}
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    style={{ color: '#f26b5e' }}
-                  >
-                    <path d={pos.d} stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                ))}
-                {/* "← this guy" label */}
-                <div className="absolute right-3 top-[18%] z-20 font-mono text-xs flex items-center gap-1 rotate-[8deg] bg-ink text-paper px-2 py-0.5 border border-ink">
-                  <span>that&apos;s me →</span>
+            {/* Photo card */}
+            <div className="relative transform -rotate-2">
+              <div className="border-2 border-ink shadow-brutal-lg bg-paper p-2.5">
+                <div className="relative w-full aspect-square overflow-hidden border-2 border-ink bg-ink/10">
+                  <Image
+                    src="/charan-profile.jpg"
+                    alt="Charan Tej Mandali"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                <div className="font-mono text-xs uppercase tracking-widest mt-3 px-1 flex justify-between">
+                  <span>charan.jpg</span>
+                  <span style={{ color: '#f26b5e' }}>● live</span>
                 </div>
               </div>
-              {/* Terminal caption chip below photo */}
-              <div className="inline-flex items-center gap-2 mt-3 bg-ink text-paper font-mono text-xs px-3 py-1.5 border-2 border-ink shadow-brutal-sm">
-                <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#22c55e' }}></span>
-                <span>{'charan@hyderabad:~$'}</span>
-                <span style={{ color: '#f59e42' }}>online</span>
-              </div>
+              {/* Decorative tape */}
+              <div
+                className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 border border-ink/40 opacity-80 rotate-3"
+                style={{ backgroundColor: '#fcd6c2' }}
+              ></div>
             </div>
 
             {/* Stats card */}
@@ -439,88 +373,57 @@ export default function Portfolio() {
 
       {/* WORK / EXPERIENCE */}
       <section id="work" className="container mx-auto px-6 py-10 md:py-16">
-        <div className="font-mono text-xs opacity-60 mb-2">
-          {'>'} console.log(&apos;experience&apos;)
-        </div>
         <h2 className="text-4xl md:text-6xl font-black mb-8" style={{ fontFamily: 'Georgia, serif' }}>
-          The track <span className="italic" style={{ color: '#f26b5e' }}>record</span>
-          <span className="inline-block w-3 h-8 md:h-12 ml-2 align-middle" style={{ backgroundColor: '#f26b5e', animation: 'corner-blink 1s infinite' }}></span>.
+          The track <span className="italic" style={{ color: '#f26b5e' }}>record</span>.
         </h2>
 
         <div className="space-y-8">
-          {experience.map((job, idx) => {
-            const companySlug = job.company.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, '')
-            return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.5 }}
-                className="border-2 border-ink shadow-brutal-lg overflow-hidden"
-                style={{ backgroundColor: idx === 0 ? '#f59e42' : '#f5ead4' }}
-              >
-                {/* macOS-style window header */}
-                <div className="flex items-center justify-between px-4 py-2 border-b-2 border-ink bg-ink text-paper">
-                  <div className="flex items-center gap-2">
-                    <span className="flex gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                      <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                      <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                    </span>
-                    <span className="font-mono text-xs opacity-70 ml-2">
-                      {companySlug}.ts — {job.location}
-                    </span>
+          {experience.map((job, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.5 }}
+              className="bg-paper border-2 border-ink shadow-brutal-lg p-6 md:p-8"
+              style={{ backgroundColor: idx === 0 ? '#f59e42' : '#f5ead4' }}
+            >
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
+                <div>
+                  <div className="font-mono text-xs uppercase tracking-widest mb-2 opacity-70">
+                    #{String(idx + 1).padStart(2, '0')} · {job.location}
                   </div>
-                  <span className="font-mono text-xs" style={{ color: '#f59e42' }}>● {idx === 0 ? 'current' : 'archived'}</span>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-1" style={{ fontFamily: 'Georgia, serif' }}>
+                    {job.title}
+                  </h3>
+                  <div className="text-lg font-mono">@ {job.company}</div>
                 </div>
-
-                <div className="p-5 md:p-7">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-5">
-                    <div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-1" style={{ fontFamily: 'Georgia, serif' }}>
-                        {job.title}
-                      </h3>
-                      <div className="text-lg font-mono">
-                        <span style={{ color: '#0f766e' }}>const</span>{' '}
-                        <span className="font-bold">company</span>{' '}
-                        <span className="opacity-50">=</span>{' '}
-                        <span style={{ color: '#f26b5e' }}>&quot;{job.company}&quot;</span>
-                      </div>
-                    </div>
-                    <div className="font-mono text-sm bg-ink text-paper px-3 py-1 self-start whitespace-nowrap">
-                      {job.period}
-                    </div>
-                  </div>
-
-                  {/* Code-block style points with line numbers */}
-                  <div className="bg-ink/5 border-l-4 rounded-sm mb-4" style={{ borderLeftColor: '#f26b5e' }}>
-                    <ul className="divide-y divide-ink/10">
-                      {job.points.map((point, i) => (
-                        <li key={i} className="flex gap-3 px-3 py-2 font-mono text-sm md:text-[0.92rem]">
-                          <span className="opacity-40 select-none text-right w-6 flex-shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                          <span className="opacity-50" style={{ color: '#0f766e' }}>▸</span>
-                          <span className="leading-relaxed" style={{ fontFamily: 'var(--font-geist-sans)' }}>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 items-center">
-                    <span className="font-mono text-xs opacity-50">stack:</span>
-                    {job.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-xs font-mono border border-ink px-2 py-0.5 bg-paper"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                <div className="font-mono text-sm bg-ink text-paper px-3 py-1 self-start whitespace-nowrap">
+                  {job.period}
                 </div>
-              </motion.div>
-            )
-          })}
+              </div>
+
+              <ul className="space-y-2 mb-5">
+                {job.points.map((point, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="font-mono opacity-50 mt-1">→</span>
+                    <span className="leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2">
+                {job.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="text-xs font-mono uppercase tracking-wider border border-ink px-2 py-1 bg-paper"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
@@ -535,9 +438,6 @@ export default function Portfolio() {
       {/* AI PROJECTS */}
       <section id="projects" className="container mx-auto px-6 py-10 md:py-16">
         <div className="max-w-3xl mb-8">
-          <div className="font-mono text-xs opacity-60 mb-2">
-            /* side quests that feed the main plot */
-          </div>
           <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: 'Georgia, serif' }}>
             Side projects, <span className="italic" style={{ color: '#0f766e' }}>real intent</span>.
           </h2>
@@ -591,11 +491,7 @@ export default function Portfolio() {
       </section>
 
       {/* ENTERPRISE PROJECTS */}
-      <section className="container mx-auto px-6 py-10 md:py-16 border-t-2 border-ink relative">
-        {/* Terminal prompt accent */}
-        <div className="absolute top-4 right-6 font-mono text-xs hidden md:block opacity-40">
-          {'~/prod $'} <span className="animate-pulse">▊</span>
-        </div>
+      <section className="container mx-auto px-6 py-10 md:py-16 border-t-2 border-ink">
         <div className="font-mono text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
           <span className="inline-block w-8 h-px bg-ink"></span>
           <span>04 / Enterprise systems</span>
@@ -649,70 +545,32 @@ export default function Portfolio() {
             What I <span className="italic" style={{ color: '#f59e42' }}>reach for</span>.
           </h2>
 
-          {/* Terminal window — full skills output */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="border-2 border-paper overflow-hidden font-mono text-sm"
-          >
-            {/* Terminal chrome */}
-            <div className="flex items-center justify-between px-4 py-2 border-b-2 border-paper/40 bg-paper/10">
-              <div className="flex items-center gap-2">
-                <span className="flex gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                </span>
-                <span className="text-xs opacity-60 ml-2">zsh · ~/charan/.skills</span>
-              </div>
-              <span className="text-xs" style={{ color: '#22c55e' }}>● connected</span>
-            </div>
-
-            {/* Terminal body */}
-            <div className="p-5 md:p-6 space-y-5">
-              {skillCategories.map((cat, idx) => {
-                const catSlug = cat.name.toLowerCase().replace(/[^a-z]/g, '_')
-                return (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  >
-                    <div className="mb-2">
-                      <span style={{ color: '#22c55e' }}>charan@hyderabad</span>
-                      <span className="opacity-50">:</span>
-                      <span style={{ color: '#f26b5e' }}>~</span>
-                      <span className="opacity-50">$ </span>
-                      <span>ls --skill <span style={{ color: '#f59e42' }}>{catSlug}</span></span>
-                    </div>
-                    <div className="pl-4 border-l-2 flex flex-wrap gap-1.5" style={{ borderColor: '#f59e42' }}>
-                      {cat.items.map((item, i) => (
-                        <span
-                          key={i}
-                          className="text-xs md:text-sm px-2 py-0.5 border border-paper/30 hover:bg-paper hover:text-ink transition-colors cursor-default"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </motion.div>
-                )
-              })}
-
-              {/* Prompt with blinking cursor at bottom */}
-              <div>
-                <span style={{ color: '#22c55e' }}>charan@hyderabad</span>
-                <span className="opacity-50">:</span>
-                <span style={{ color: '#f26b5e' }}>~</span>
-                <span className="opacity-50">$ </span>
-                <span className="animate-pulse">▊</span>
-              </div>
-            </div>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {skillCategories.map((cat, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="border-2 border-paper p-6"
+              >
+                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Georgia, serif', color: '#f59e42' }}>
+                  {cat.name}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map((item, i) => (
+                    <span
+                      key={i}
+                      className="text-sm font-mono border border-paper/50 px-3 py-1 hover:bg-paper hover:text-ink transition-colors cursor-default"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -832,8 +690,6 @@ export default function Portfolio() {
           </div>
         </div>
       </footer>
-
-      </div>{/* /relative z-10 content wrapper */}
     </div>
   )
 }
