@@ -144,24 +144,6 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen paper-bg text-ink">
-      {/* Top marquee strip */}
-      <div className="bg-ink text-paper border-b-2 border-ink overflow-hidden">
-        <div className="marquee whitespace-nowrap py-2 text-sm font-mono uppercase tracking-wider flex">
-          <span className="mx-6">★ Charan Tej Mandali</span>
-          <span className="mx-6">/ AI Automation Engineer</span>
-          <span className="mx-6">★ Hyderabad, India</span>
-          <span className="mx-6">/ MCP · Agents · Backend at Scale</span>
-          <span className="mx-6">★ Built for 6 brands · 50+ clients · Millions of users</span>
-          <span className="mx-6">/ Currently shipping AI automation</span>
-          <span className="mx-6">★ Charan Tej Mandali</span>
-          <span className="mx-6">/ AI Automation Engineer</span>
-          <span className="mx-6">★ Hyderabad, India</span>
-          <span className="mx-6">/ MCP · Agents · Backend at Scale</span>
-          <span className="mx-6">★ Built for 6 brands · 50+ clients · Millions of users</span>
-          <span className="mx-6">/ Currently shipping AI automation</span>
-        </div>
-      </div>
-
       {/* Header */}
       <header className="border-b-2 border-ink bg-paper sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -208,9 +190,9 @@ export default function Portfolio() {
               className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight mb-6"
               style={{ fontFamily: 'Georgia, serif' }}
             >
-              I build <span className="italic text-tangerine" style={{ color: '#ff5a1f' }}>AI systems</span>
+              I build <span className="italic text-tangerine" style={{ color: '#e63946' }}>AI systems</span>
               <br />
-              that <span className="underline decoration-4 decoration-teal underline-offset-8" style={{ textDecorationColor: '#1e5f5c' }}>actually</span> ship.
+              that <span className="underline decoration-4 decoration-teal underline-offset-8" style={{ textDecorationColor: '#1b5e47' }}>actually</span> ship.
             </motion.h1>
 
             <motion.div variants={fadeUp} className="font-mono text-lg md:text-xl mb-8 inline-block bg-ink text-paper px-4 py-2">
@@ -249,7 +231,7 @@ export default function Portfolio() {
           >
             <div
               className="bg-paper border-2 border-ink shadow-brutal p-6 transform rotate-1"
-              style={{ backgroundColor: '#fcd34d' }}
+              style={{ backgroundColor: '#f4d35e' }}
             >
               <div className="font-mono text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
                 <Sparkles size={14} /> Quick stats
@@ -317,7 +299,7 @@ export default function Portfolio() {
       {/* WORK / EXPERIENCE */}
       <section id="work" className="container mx-auto px-6 py-16 md:py-24">
         <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-          The track <span className="italic" style={{ color: '#ff5a1f' }}>record</span>.
+          The track <span className="italic" style={{ color: '#e63946' }}>record</span>.
         </h2>
 
         <div className="space-y-8">
@@ -329,7 +311,7 @@ export default function Portfolio() {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5 }}
               className="bg-paper border-2 border-ink shadow-brutal-lg p-6 md:p-8"
-              style={{ backgroundColor: idx === 0 ? '#fcd34d' : '#ebe6da' }}
+              style={{ backgroundColor: idx === 0 ? '#f4d35e' : '#ece5d6' }}
             >
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
                 <div>
@@ -371,7 +353,7 @@ export default function Portfolio() {
       </section>
 
       {/* DIVIDER */}
-      <div className="border-t-2 border-ink py-3" style={{ backgroundColor: '#1e5f5c', color: '#f4f1ea' }}>
+      <div className="border-t-2 border-ink py-3" style={{ backgroundColor: '#1b5e47', color: '#f5efe6' }}>
         <div className="container mx-auto px-6 font-mono text-sm uppercase tracking-widest flex justify-between">
           <span>03 / AI &amp; Automation</span>
           <span className="hidden md:block">↓ projects</span>
@@ -382,7 +364,7 @@ export default function Portfolio() {
       <section id="projects" className="container mx-auto px-6 py-16 md:py-24">
         <div className="max-w-3xl mb-12">
           <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: 'Georgia, serif' }}>
-            Side projects, <span className="italic" style={{ color: '#1e5f5c' }}>real intent</span>.
+            Side projects, <span className="italic" style={{ color: '#1b5e47' }}>real intent</span>.
           </h2>
           <p className="text-lg opacity-80">
             I don&apos;t just integrate APIs — I build the infrastructure agents need to be reliable in production.
@@ -392,12 +374,12 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-3 gap-6">
           {aiProjects.map((project, idx) => {
             const accentMap: Record<string, string> = {
-              tangerine: '#ff5a1f',
-              teal: '#1e5f5c',
-              mustard: '#fcd34d',
+              tangerine: '#e63946',
+              teal: '#1b5e47',
+              mustard: '#f4d35e',
             }
             const bgColor = accentMap[project.accent]
-            const textColor = project.accent === 'mustard' ? '#0a0a0a' : '#f4f1ea'
+            const textColor = project.accent === 'mustard' ? '#0f1a2e' : '#f5efe6'
 
             return (
               <motion.div
@@ -440,7 +422,7 @@ export default function Portfolio() {
           <span>04 / Enterprise systems</span>
         </div>
         <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-          Built at <span className="italic" style={{ color: '#ff5a1f' }}>scale</span>.
+          Built at <span className="italic" style={{ color: '#e63946' }}>scale</span>.
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -453,7 +435,7 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="bg-paper border-2 border-ink shadow-brutal brutal-hover p-6"
             >
-              <div className="text-5xl font-black mb-1" style={{ color: '#ff5a1f', fontFamily: 'Georgia, serif' }}>
+              <div className="text-5xl font-black mb-1" style={{ color: '#e63946', fontFamily: 'Georgia, serif' }}>
                 {project.stat}
               </div>
               <div className="font-mono text-xs uppercase tracking-widest mb-4 opacity-70">
@@ -485,7 +467,7 @@ export default function Portfolio() {
             <span>05 / The toolkit</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-            What I <span className="italic" style={{ color: '#fcd34d' }}>reach for</span>.
+            What I <span className="italic" style={{ color: '#f4d35e' }}>reach for</span>.
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -498,7 +480,7 @@ export default function Portfolio() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="border-2 border-paper p-6"
               >
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Georgia, serif', color: '#fcd34d' }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Georgia, serif', color: '#f4d35e' }}>
                   {cat.name}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -524,14 +506,14 @@ export default function Portfolio() {
           <span>06 / Wall of stickers</span>
         </div>
         <h2 className="text-4xl md:text-6xl font-black mb-12" style={{ fontFamily: 'Georgia, serif' }}>
-          Things I&apos;ve <span className="italic" style={{ color: '#ff5a1f' }}>broken open</span>.
+          Things I&apos;ve <span className="italic" style={{ color: '#e63946' }}>broken open</span>.
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {awards.map((award, idx) => {
             const rotations = ['rotate-2', '-rotate-1', 'rotate-1', '-rotate-2']
-            const colors = ['#fcd34d', '#ff5a1f', '#1e5f5c', '#ebe6da']
-            const textColors = ['#0a0a0a', '#f4f1ea', '#f4f1ea', '#0a0a0a']
+            const colors = ['#f4d35e', '#e63946', '#1b5e47', '#ece5d6']
+            const textColors = ['#0f1a2e', '#f5efe6', '#f5efe6', '#0f1a2e']
             return (
               <motion.div
                 key={idx}
@@ -556,9 +538,27 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Marquee strip — leads into contact CTA */}
+      <div className="bg-ink text-paper border-y-2 border-ink overflow-hidden py-3">
+        <div className="marquee whitespace-nowrap text-base font-mono uppercase tracking-wider flex">
+          <span className="mx-6">★ Available for AI Automation roles</span>
+          <span className="mx-6">/ Hyderabad · Remote India · Remote worldwide</span>
+          <span className="mx-6">★ MCP · Agents · Backend at scale</span>
+          <span className="mx-6">/ Built for 6 brands · 50+ clients · Millions of users</span>
+          <span className="mx-6">★ Let&apos;s ship something</span>
+          <span className="mx-6">/ charantejmandali18@gmail.com</span>
+          <span className="mx-6">★ Available for AI Automation roles</span>
+          <span className="mx-6">/ Hyderabad · Remote India · Remote worldwide</span>
+          <span className="mx-6">★ MCP · Agents · Backend at scale</span>
+          <span className="mx-6">/ Built for 6 brands · 50+ clients · Millions of users</span>
+          <span className="mx-6">★ Let&apos;s ship something</span>
+          <span className="mx-6">/ charantejmandali18@gmail.com</span>
+        </div>
+      </div>
+
       {/* CONTACT */}
-      <section id="contact" className="border-t-2 border-ink py-16 md:py-24" style={{ backgroundColor: '#ff5a1f' }}>
-        <div className="container mx-auto px-6 text-paper" style={{ color: '#0a0a0a' }}>
+      <section id="contact" className="py-16 md:py-24" style={{ backgroundColor: '#e63946' }}>
+        <div className="container mx-auto px-6 text-paper" style={{ color: '#0f1a2e' }}>
           <div className="font-mono text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
             <span className="inline-block w-8 h-px bg-ink"></span>
             <span>07 / Let&apos;s build something</span>
@@ -608,7 +608,7 @@ export default function Portfolio() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-sm">
           <div>
             <span className="opacity-60">© 2025</span> Charan Tej Mandali ·{' '}
-            <span style={{ color: '#fcd34d' }}>AI Automation Engineer</span>
+            <span style={{ color: '#f4d35e' }}>AI Automation Engineer</span>
           </div>
           <div className="opacity-60">
             built with Next.js + Tailwind, no template was harmed.
