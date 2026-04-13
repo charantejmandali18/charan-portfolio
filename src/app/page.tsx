@@ -254,17 +254,6 @@ export default function Portfolio() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto relative z-10 max-w-5xl">
-          {/* Status pill */}
-          <motion.div variants={itemVariants} className="flex justify-center mb-8">
-            <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/30 px-4 py-2 rounded-full">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-              </span>
-              <span className="text-sm font-mono text-green-400">open_to_opportunities = true</span>
-            </div>
-          </motion.div>
-
           {/* Terminal window */}
           <motion.div
             variants={itemVariants}
