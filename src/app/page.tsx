@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function Portfolio() {
   const [text, setText] = useState('')
-  const roles = useMemo(() => ['AI Automation Engineer', 'AI Agent Developer', 'Backend Engineer', 'MCP Builder'], [])
+  const roles = useMemo(() => ['GTM Automation Engineer', 'Workflow Automation Builder', 'API Integration Engineer', 'AI Automation Engineer'], [])
   const [roleIndex, setRoleIndex] = useState(0)
 
   useEffect(() => {
@@ -38,102 +38,103 @@ export default function Portfolio() {
 
   const experience = [
     {
-      title: 'Software Engineer',
+      title: 'Software Engineer — Platform & Integrations',
       company: 'Inspire Brands',
       period: '2024 — Present',
       location: 'Hyderabad, IN',
-      tags: ['Java', 'Spring Boot', 'Auth0', 'SFMC', 'Twilio'],
+      tags: ['API Integrations', 'Workflow Automation', 'CRM/Loyalty', 'Multi-channel Comms', 'Webhooks'],
       points: [
-        "Integrated online ordering via Walmart app for Dunkin' — orchestrated cross-platform data flows at scale",
-        'Partnered with HMS Host (Avolta) for online ordering at airports, transit stations, metros',
-        'Built backend microservices for IDP powering 6 brands (BWW, Sonic, Arby\'s, Dunkin\', Baskin-Robbins, Jimmy John\'s)',
-        'Automated multi-channel notifications (SFMC, MadTech, SendGrid, Twilio) across millions of users',
-        'Implemented Epsilon-driven loyalty program automation across all brands',
-        'Resolved high-severity production defects, maintaining platform reliability',
+        "Orchestrated Walmart integration for Dunkin' — designed cross-platform API data flows connecting order management, payments, and inventory systems at enterprise scale",
+        'Built HMS Host (Avolta) integration pipeline enabling online ordering at 100+ airport, transit, and metro locations — webhook-driven architecture syncing menus, pricing, and availability in real-time',
+        'Automated multi-channel outreach (email, SMS, push) across millions of users by integrating SFMC, MadTech, SendGrid, and Twilio into a unified notification orchestration layer',
+        'Engineered loyalty program automation with Epsilon — designed data enrichment workflows connecting customer profiles, purchase history, and engagement scoring across 6 brands',
+        'Built and maintained microservices for payment processing, order management, and location services powering BWW, Sonic, Arby\'s, Dunkin\', Baskin-Robbins, Jimmy John\'s',
+        'Resolved high-severity production defects impacting millions of users, coordinating cross-functional incident response',
       ],
     },
     {
-      title: 'Associate Software Engineer 2',
+      title: 'Automation & Data Integration Engineer',
       company: 'Highradius Corporation',
       period: '2022 — 2024',
       location: 'Hyderabad, IN',
-      tags: ['Apache Airflow', 'Spark', 'Snowflake', 'DBT', 'Meltano'],
+      tags: ['Workflow Orchestration', 'Salesforce/Netsuite', 'Data Pipelines', 'API Architecture', 'Snowflake'],
       points: [
-        'Built Meltano + Airflow integration service — automated pipeline orchestration, cut tool costs by 30%',
-        'Automated ETL pipelines (DBT + Spark) from ERP systems (Netsuite, Salesforce) — 40% efficiency gain',
-        'Engineered backend API infrastructure with Apache Airflow for CFOTech',
-        'Designed automated SFTP ingestion with Snowflake serving 50+ enterprise clients daily',
-        "Built 'copy workbook' feature in LiveCube with Apache Spark for 200+ users",
-        'Ran POC integrating Apache Solr + CDC mechanism using Debezium for real-time data sync',
+        'Built a scalable integration service using Meltano + Apache Airflow — automated data pipeline orchestration across platforms, reducing tool costs by 30% and eliminating manual data routing',
+        'Automated ETL pipelines pulling data from CRM/ERP systems (Salesforce, Netsuite) using DBT + Spark — 40% efficiency gain in data processing and enrichment workflows',
+        'Designed automated SFTP file ingestion with Snowflake for high-volume data transfers serving 50+ enterprise clients daily — zero-touch data pipeline from source to warehouse',
+        'Engineered backend API infrastructure using Apache Airflow for CFOTech — workflow automation for financial data integration across multiple platforms',
+        "Built 'copy workbook' feature in LiveCube with Apache Spark for real-time data processing serving 200+ users",
+        'Ran POC integrating Apache Solr for search + CDC mechanism using Debezium for real-time data sync across systems',
       ],
     },
     {
-      title: 'Software Developer Trainee',
+      title: 'Integration Engineer (Trainee)',
       company: 'Highradius Corporation',
       period: '2021 — 2022',
       location: 'Hyderabad, IN',
-      tags: ['Workato', 'Java', 'API Integration'],
+      tags: ['Workato', 'API Integrations', 'Data Parsing', 'Automation'],
       points: [
-        'Built API integrations using Workato — automating data flow across enterprise systems',
-        'Engineered financial data parsers (MT940, BAI, BAI2) for automated bank statement processing',
-        'Designed testing strategies that increased code coverage by 30%',
+        'Built API integrations using Workato (iPaaS) — automated data flow and sync across enterprise systems with zero manual intervention',
+        'Engineered automated financial data parsers (MT940, BAI, BAI2) for bank statement processing and reconciliation — structured data extraction at scale',
+        'Designed testing strategies that increased code coverage by 30%, ensuring integration reliability',
       ],
     },
   ]
 
   const aiProjects = [
     {
-      title: 'MCP Server Development',
-      tag: 'Agent Infrastructure',
-      description: 'Built Model Context Protocol servers — gives AI agents the ability to interact with external systems through standardized tool interfaces.',
-      tech: ['MCP Protocol', 'Python', 'TypeScript', 'REST APIs'],
+      title: 'AI-Powered Workflow Automation',
+      tag: 'GTM Automation',
+      description: 'Built intelligent workflow automation systems using LLM APIs — automated lead enrichment, data routing, and outreach personalization with context-aware pipelines.',
+      tech: ['Make.com', 'n8n', 'OpenAI API', 'Python', 'REST APIs', 'Webhooks'],
       accent: 'tangerine',
     },
     {
-      title: 'AI Chat Automation',
-      tag: 'Production AI',
-      description: 'Designed intelligent chat automation systems using LLM APIs with context-aware response pipelines for support and internal ops.',
-      tech: ['OpenAI API', 'Claude API', 'FastAPI', 'Python'],
+      title: 'Slack Ops Bots & Alerting',
+      tag: 'Operations Automation',
+      description: 'Built AI-powered Slack bots that automate team workflows — event-driven triggers, webhook integrations, scheduled reports, and intelligent alert routing.',
+      tech: ['Slack API', 'OpenAI API', 'Python', 'Webhooks', 'Zapier'],
       accent: 'teal',
     },
     {
-      title: 'Slack Automation Bots',
-      tag: 'Workflow Automation',
-      description: 'Built AI-powered Slack bots automating team workflows with LLM APIs, webhook integrations, and event-driven triggers.',
-      tech: ['Slack API', 'OpenAI API', 'Python', 'Webhooks'],
+      title: 'MCP Tool Servers',
+      tag: 'AI Agent Infrastructure',
+      description: 'Developed Model Context Protocol servers enabling AI agents to interact with CRMs, databases, and external APIs through standardized tool interfaces.',
+      tech: ['MCP Protocol', 'Python', 'TypeScript', 'REST APIs'],
       accent: 'mustard',
     },
   ]
 
   const enterpriseProjects = [
     {
-      title: 'Inspire Digital Platform',
+      title: 'Multi-Brand Notification Engine',
       stat: '6 brands',
-      statLabel: 'in production',
-      description: 'Backend microservices powering 6 major restaurant brands with Walmart and HMS Host integrations.',
-      tech: ['Java', 'Spring Boot', 'Auth0', 'Epsilon'],
+      statLabel: 'millions of users',
+      description: 'Automated multi-channel outreach system (email, SMS, push) integrating SFMC, SendGrid, and Twilio with customer segmentation and engagement scoring.',
+      tech: ['SFMC', 'Twilio', 'SendGrid', 'Webhooks', 'APIs'],
     },
     {
-      title: 'CFOTech Data Platform',
+      title: 'Data Integration Pipeline',
       stat: '50+ clients',
-      statLabel: 'served daily',
-      description: 'Automated data pipeline infrastructure with workflow orchestration for enterprise financial products.',
-      tech: ['Airflow', 'Meltano', 'Snowflake', 'DBT'],
+      statLabel: 'automated daily',
+      description: 'Zero-touch data enrichment and routing pipelines from CRM/ERP sources (Salesforce, Netsuite) to analytics — workflow orchestration with Airflow.',
+      tech: ['Airflow', 'Meltano', 'Salesforce', 'Snowflake', 'DBT'],
     },
     {
-      title: 'LiveCube Enhancement',
-      stat: '200+ users',
-      statLabel: 'real-time processing',
-      description: 'Copy workbook feature with Apache Spark integration for real-time data processing.',
-      tech: ['Spark', 'Java', 'Microservices'],
+      title: 'Cross-Platform API Integrations',
+      stat: '3 partners',
+      statLabel: 'Walmart · HMS Host · Epsilon',
+      description: 'Designed and built enterprise API integrations connecting ordering, loyalty, and payments systems across partners.',
+      tech: ['REST APIs', 'Webhooks', 'Java', 'Spring Boot'],
     },
   ]
 
   const skillCategories = [
-    { name: 'AI & Automation', items: ['MCP Servers', 'OpenAI API', 'Claude API', 'AI Agents', 'Agentic Workflows', 'Slack Bots', 'Chat Automation', 'Prompt Engineering', 'LLM Integration'] },
-    { name: 'Backend & API', items: ['Java', 'Spring Boot', 'Python', 'FastAPI', 'REST', 'GraphQL', 'Microservices', 'Distributed Systems'] },
-    { name: 'Data & Orchestration', items: ['Apache Airflow', 'Apache Spark', 'Snowflake', 'DBT', 'Meltano', 'ETL Pipelines', 'CDC (Debezium)'] },
-    { name: 'Cloud & DevOps', items: ['AWS', 'Azure', 'Docker', 'Argo Workflows'] },
+    { name: 'Workflow & GTM Automation', items: ['Make.com', 'n8n', 'Zapier', 'Clay', 'Apache Airflow', 'Meltano', 'Workato', 'Webhooks', 'Cron Scheduling', 'Event-Driven Automation'] },
+    { name: 'AI & LLM Integration', items: ['OpenAI API', 'Claude API', 'MCP Servers', 'AI Agents', 'Prompt Engineering', 'LLM Workflows', 'Chat Automation', 'Slack Bots'] },
+    { name: 'APIs & Integration', items: ['REST APIs', 'GraphQL', 'Salesforce', 'HubSpot', 'SFMC', 'Twilio', 'SendGrid', 'Epsilon', 'Netsuite'] },
+    { name: 'Data & Backend', items: ['Python', 'SQL', 'Java', 'Spring Boot', 'Snowflake', 'DBT', 'Apache Spark', 'ETL Pipelines', 'FastAPI'] },
+    { name: 'Cloud & DevOps', items: ['AWS', 'Azure', 'Docker', 'Argo Workflows', 'CI/CD'] },
   ]
 
   const awards = [
@@ -177,7 +178,7 @@ export default function Portfolio() {
           <div className="flex items-center gap-3 flex-wrap">
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#f26b5e' }}></span>
-              available for AI roles
+              available for automation roles
             </span>
             <span className="opacity-30">·</span>
             <span>4+ yrs shipping</span>
@@ -214,9 +215,9 @@ export default function Portfolio() {
               className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-5"
               style={{ fontFamily: 'Georgia, serif' }}
             >
-              I build <span className="italic" style={{ color: '#f26b5e' }}>AI systems</span>
+              I automate <span className="italic" style={{ color: '#f26b5e' }}>workflows</span>
               <br />
-              that <span className="underline decoration-4 underline-offset-8" style={{ textDecorationColor: '#0f766e' }}>actually</span> ship.
+              that <span className="underline decoration-4 underline-offset-8" style={{ textDecorationColor: '#0f766e' }}>scale revenue</span>.
             </motion.h1>
 
             <motion.div variants={fadeUp} className="font-mono text-base md:text-lg mb-5 inline-block bg-ink text-paper px-3 py-1.5">
@@ -225,9 +226,9 @@ export default function Portfolio() {
             </motion.div>
 
             <motion.p variants={fadeUp} className="text-base md:text-lg max-w-2xl leading-relaxed mb-6">
-              4+ years building production backend systems at enterprise scale.
-              Currently obsessed with <strong>MCP servers, AI agents, and automation that doesn&apos;t suck</strong>.
-              Backend muscle meets LLM ambition.
+              4+ years building automated data pipelines, API integrations, and workflow orchestration at enterprise scale.
+              Currently building with <strong>Make.com, n8n, Clay, and AI — automating everything from lead enrichment to multi-channel outreach</strong>.
+              The kind of engineer who turns a 10-step manual process into a one-click workflow.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-8">
@@ -252,9 +253,9 @@ export default function Portfolio() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
-                  { label: 'MCP servers', desc: 'tool infra for AI agents', color: '#f26b5e' },
-                  { label: 'Chat automation', desc: 'LLM-powered workflows', color: '#0f766e' },
-                  { label: 'Slack bots', desc: 'event-driven AI ops', color: '#f59e42' },
+                  { label: 'GTM automation', desc: 'lead gen & enrichment pipelines', color: '#f26b5e' },
+                  { label: 'Workflow engines', desc: 'Make.com, n8n, Airflow', color: '#0f766e' },
+                  { label: 'AI + APIs', desc: 'LLM-powered data flows', color: '#f59e42' },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -439,10 +440,10 @@ export default function Portfolio() {
       <section id="projects" className="container mx-auto px-6 py-10 md:py-16">
         <div className="max-w-3xl mb-8">
           <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: 'Georgia, serif' }}>
-            Side projects, <span className="italic" style={{ color: '#0f766e' }}>real intent</span>.
+            Automation projects, <span className="italic" style={{ color: '#0f766e' }}>real impact</span>.
           </h2>
           <p className="text-lg opacity-80">
-            I don&apos;t just integrate APIs — I build the infrastructure agents need to be reliable in production.
+            I don&apos;t just connect tools — I build the automation infrastructure that runs without babysitting.
           </p>
         </div>
 
@@ -616,17 +617,17 @@ export default function Portfolio() {
       {/* Marquee strip — leads into contact CTA */}
       <div className="bg-ink text-paper border-y-2 border-ink overflow-hidden py-3">
         <div className="marquee whitespace-nowrap text-base font-mono uppercase tracking-wider flex">
-          <span className="mx-6">★ Available for AI Automation roles</span>
-          <span className="mx-6">/ Hyderabad · Remote India · Remote worldwide</span>
-          <span className="mx-6">★ MCP · Agents · Backend at scale</span>
-          <span className="mx-6">/ Built for 6 brands · 50+ clients · Millions of users</span>
-          <span className="mx-6">★ Let&apos;s ship something</span>
+          <span className="mx-6">★ GTM Automation · Workflow Engineering · API Integrations</span>
+          <span className="mx-6">/ Make.com · n8n · Clay · Airflow · Python · SQL</span>
+          <span className="mx-6">★ 50+ enterprise clients automated</span>
+          <span className="mx-6">/ 6 brands · Walmart · HMS Host · Salesforce · Netsuite</span>
+          <span className="mx-6">★ Available for automation roles</span>
           <span className="mx-6">/ charantejmandali18@gmail.com</span>
-          <span className="mx-6">★ Available for AI Automation roles</span>
-          <span className="mx-6">/ Hyderabad · Remote India · Remote worldwide</span>
-          <span className="mx-6">★ MCP · Agents · Backend at scale</span>
-          <span className="mx-6">/ Built for 6 brands · 50+ clients · Millions of users</span>
-          <span className="mx-6">★ Let&apos;s ship something</span>
+          <span className="mx-6">★ GTM Automation · Workflow Engineering · API Integrations</span>
+          <span className="mx-6">/ Make.com · n8n · Clay · Airflow · Python · SQL</span>
+          <span className="mx-6">★ 50+ enterprise clients automated</span>
+          <span className="mx-6">/ 6 brands · Walmart · HMS Host · Salesforce · Netsuite</span>
+          <span className="mx-6">★ Available for automation roles</span>
           <span className="mx-6">/ charantejmandali18@gmail.com</span>
         </div>
       </div>
@@ -639,12 +640,12 @@ export default function Portfolio() {
             <span>07 / Let&apos;s build something</span>
           </div>
           <h2 className="text-5xl md:text-8xl font-black mb-8 leading-[0.95]" style={{ fontFamily: 'Georgia, serif' }}>
-            Got an AI thing<br />
-            that needs <span className="italic underline decoration-4 underline-offset-8">shipping?</span>
+            Got a workflow<br />
+            that needs <span className="italic underline decoration-4 underline-offset-8">automating?</span>
           </h2>
           <p className="text-xl mb-10 max-w-2xl">
-            I&apos;m available for AI Automation Engineer roles — Hyderabad, remote India, or remote worldwide with sensible comp.
-            If you&apos;re building agents, MCPs, or production AI systems — let&apos;s talk.
+            I&apos;m available for GTM Automation, Workflow Automation, and Integration Engineer roles — Hyderabad, remote India, or remote worldwide.
+            If you need someone to build the automation that powers your pipeline — let&apos;s talk.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -683,7 +684,7 @@ export default function Portfolio() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-sm">
           <div>
             <span className="opacity-60">© 2025</span> Charan Tej Mandali ·{' '}
-            <span style={{ color: '#f59e42' }}>AI Automation Engineer</span>
+            <span style={{ color: '#f59e42' }}>GTM & Workflow Automation Engineer</span>
           </div>
           <div className="opacity-60">
             built with Next.js + Tailwind, no template was harmed.
