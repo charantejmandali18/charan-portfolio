@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function Portfolio() {
   const [text, setText] = useState('')
-  const roles = useMemo(() => ['GTM Automation Engineer', 'Workflow Automation Builder', 'API Integration Engineer', 'AI Automation Engineer'], [])
+  const roles = useMemo(() => ['AI Automation Engineer', 'Workflow Automation Builder', 'GTM Automation Engineer', 'API Integration Engineer'], [])
   const [roleIndex, setRoleIndex] = useState(0)
 
   useEffect(() => {
@@ -130,10 +130,10 @@ export default function Portfolio() {
   ]
 
   const skillCategories = [
-    { name: 'Workflow & GTM Automation', items: ['Make.com', 'n8n', 'Zapier', 'Clay', 'Apache Airflow', 'Meltano', 'Workato', 'Webhooks', 'Cron Scheduling', 'Event-Driven Automation'] },
-    { name: 'AI & LLM Integration', items: ['OpenAI API', 'Claude API', 'MCP Servers', 'AI Agents', 'Prompt Engineering', 'LLM Workflows', 'Chat Automation', 'Slack Bots'] },
+    { name: 'AI & Automation', items: ['OpenAI API', 'Claude API', 'MCP Servers', 'AI Agents', 'Make.com', 'n8n', 'Zapier', 'Clay', 'Prompt Engineering', 'LLM Workflows', 'Chat Automation', 'Slack Bots'] },
+    { name: 'Workflow Orchestration', items: ['Apache Airflow', 'Meltano', 'Workato', 'Webhooks', 'Event-Driven Automation', 'Cron Scheduling', 'ETL Pipelines'] },
     { name: 'APIs & Integration', items: ['REST APIs', 'GraphQL', 'Salesforce', 'HubSpot', 'SFMC', 'Twilio', 'SendGrid', 'Epsilon', 'Netsuite'] },
-    { name: 'Data & Backend', items: ['Python', 'SQL', 'Java', 'Spring Boot', 'Snowflake', 'DBT', 'Apache Spark', 'ETL Pipelines', 'FastAPI'] },
+    { name: 'Data & Backend', items: ['Python', 'SQL', 'Java', 'Spring Boot', 'Snowflake', 'DBT', 'Apache Spark', 'FastAPI'] },
     { name: 'Cloud & DevOps', items: ['AWS', 'Azure', 'Docker', 'Argo Workflows', 'CI/CD'] },
   ]
 
@@ -178,7 +178,7 @@ export default function Portfolio() {
           <div className="flex items-center gap-3 flex-wrap">
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#f26b5e' }}></span>
-              available for automation roles
+              available for AI automation roles
             </span>
             <span className="opacity-30">·</span>
             <span>4+ yrs shipping</span>
@@ -215,9 +215,9 @@ export default function Portfolio() {
               className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-5"
               style={{ fontFamily: 'Georgia, serif' }}
             >
-              I automate <span className="italic" style={{ color: '#f26b5e' }}>workflows</span>
+              I build <span className="italic" style={{ color: '#f26b5e' }}>AI automation</span>
               <br />
-              that <span className="underline decoration-4 underline-offset-8" style={{ textDecorationColor: '#0f766e' }}>scale revenue</span>.
+              that <span className="underline decoration-4 underline-offset-8" style={{ textDecorationColor: '#0f766e' }}>actually</span> ships.
             </motion.h1>
 
             <motion.div variants={fadeUp} className="font-mono text-base md:text-lg mb-5 inline-block bg-ink text-paper px-3 py-1.5">
@@ -226,9 +226,9 @@ export default function Portfolio() {
             </motion.div>
 
             <motion.p variants={fadeUp} className="text-base md:text-lg max-w-2xl leading-relaxed mb-6">
-              4+ years building automated data pipelines, API integrations, and workflow orchestration at enterprise scale.
-              Currently building with <strong>Make.com, n8n, Clay, and AI — automating everything from lead enrichment to multi-channel outreach</strong>.
-              The kind of engineer who turns a 10-step manual process into a one-click workflow.
+              4+ years building production systems, API integrations, and workflow automation at enterprise scale.
+              Currently building with <strong>AI APIs, Make.com, n8n, and Python — automating everything from data pipelines to multi-channel outreach</strong>.
+              Backend muscle meets AI automation ambition.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-8">
@@ -253,9 +253,9 @@ export default function Portfolio() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
-                  { label: 'GTM automation', desc: 'lead gen & enrichment pipelines', color: '#f26b5e' },
+                  { label: 'AI automation', desc: 'LLM-powered workflows & agents', color: '#f26b5e' },
                   { label: 'Workflow engines', desc: 'Make.com, n8n, Airflow', color: '#0f766e' },
-                  { label: 'AI + APIs', desc: 'LLM-powered data flows', color: '#f59e42' },
+                  { label: 'API integrations', desc: 'CRM, ERP, multi-channel', color: '#f59e42' },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -617,17 +617,17 @@ export default function Portfolio() {
       {/* Marquee strip — leads into contact CTA */}
       <div className="bg-ink text-paper border-y-2 border-ink overflow-hidden py-3">
         <div className="marquee whitespace-nowrap text-base font-mono uppercase tracking-wider flex">
-          <span className="mx-6">★ GTM Automation · Workflow Engineering · API Integrations</span>
-          <span className="mx-6">/ Make.com · n8n · Clay · Airflow · Python · SQL</span>
-          <span className="mx-6">★ 50+ enterprise clients automated</span>
-          <span className="mx-6">/ 6 brands · Walmart · HMS Host · Salesforce · Netsuite</span>
-          <span className="mx-6">★ Available for automation roles</span>
+          <span className="mx-6">★ AI Automation · Workflow Engineering · API Integrations</span>
+          <span className="mx-6">/ AI APIs · Make.com · n8n · Airflow · Python · SQL</span>
+          <span className="mx-6">★ 50+ enterprise clients · 6 brands at scale</span>
+          <span className="mx-6">/ Walmart · HMS Host · Salesforce · Netsuite</span>
+          <span className="mx-6">★ Available for AI automation roles</span>
           <span className="mx-6">/ charantejmandali18@gmail.com</span>
-          <span className="mx-6">★ GTM Automation · Workflow Engineering · API Integrations</span>
-          <span className="mx-6">/ Make.com · n8n · Clay · Airflow · Python · SQL</span>
-          <span className="mx-6">★ 50+ enterprise clients automated</span>
-          <span className="mx-6">/ 6 brands · Walmart · HMS Host · Salesforce · Netsuite</span>
-          <span className="mx-6">★ Available for automation roles</span>
+          <span className="mx-6">★ AI Automation · Workflow Engineering · API Integrations</span>
+          <span className="mx-6">/ AI APIs · Make.com · n8n · Airflow · Python · SQL</span>
+          <span className="mx-6">★ 50+ enterprise clients · 6 brands at scale</span>
+          <span className="mx-6">/ Walmart · HMS Host · Salesforce · Netsuite</span>
+          <span className="mx-6">★ Available for AI automation roles</span>
           <span className="mx-6">/ charantejmandali18@gmail.com</span>
         </div>
       </div>
@@ -640,12 +640,12 @@ export default function Portfolio() {
             <span>07 / Let&apos;s build something</span>
           </div>
           <h2 className="text-5xl md:text-8xl font-black mb-8 leading-[0.95]" style={{ fontFamily: 'Georgia, serif' }}>
-            Got a workflow<br />
+            Got something<br />
             that needs <span className="italic underline decoration-4 underline-offset-8">automating?</span>
           </h2>
           <p className="text-xl mb-10 max-w-2xl">
-            I&apos;m available for GTM Automation, Workflow Automation, and Integration Engineer roles — Hyderabad, remote India, or remote worldwide.
-            If you need someone to build the automation that powers your pipeline — let&apos;s talk.
+            I&apos;m available for AI Automation, GTM Automation, and Workflow Engineering roles — Hyderabad, remote India, or remote worldwide.
+            If you need someone to build intelligent automation that powers your pipeline — let&apos;s talk.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -684,7 +684,7 @@ export default function Portfolio() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-sm">
           <div>
             <span className="opacity-60">© 2025</span> Charan Tej Mandali ·{' '}
-            <span style={{ color: '#f59e42' }}>GTM & Workflow Automation Engineer</span>
+            <span style={{ color: '#f59e42' }}>AI & Workflow Automation Engineer</span>
           </div>
           <div className="opacity-60">
             built with Next.js + Tailwind, no template was harmed.

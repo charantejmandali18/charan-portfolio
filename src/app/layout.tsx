@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Charan Tej Mandali — GTM & Workflow Automation Engineer",
-  description: "Automation engineer building scalable data pipelines, API integrations, and workflow orchestration. Make.com, n8n, Clay, Airflow, Python. 50+ enterprise clients. 6 brands at scale.",
-  keywords: ["GTM Automation Engineer", "Workflow Automation", "Make.com", "n8n", "API Integration", "Clay", "Charan Tej Mandali"],
+  title: "Charan Tej Mandali — AI & Automation Engineer",
+  description: "AI Automation Engineer building scalable data pipelines, API integrations, and intelligent workflows. AI APIs, Make.com, n8n, Airflow, Python. 50+ enterprise clients. 6 brands at scale.",
+  keywords: ["AI Automation Engineer", "Workflow Automation", "Make.com", "n8n", "API Integration", "AI Engineer", "Charan Tej Mandali"],
   authors: [{ name: "Charan Tej Mandali" }],
   openGraph: {
-    title: "Charan Tej Mandali — GTM & Workflow Automation Engineer",
-    description: "Automation engineer specializing in workflow orchestration, API integrations, and data pipelines at enterprise scale.",
+    title: "Charan Tej Mandali — AI & Automation Engineer",
+    description: "AI Automation Engineer specializing in intelligent workflows, API integrations, and data pipelines at enterprise scale.",
     type: "website",
   },
 };
